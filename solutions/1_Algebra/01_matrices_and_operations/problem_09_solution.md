@@ -5,123 +5,44 @@
 Let
 
 $$
-S=
-\begin{pmatrix}
-2 & 0 \\
-0 & 1
-\end{pmatrix},
-\qquad
-R=
-\begin{pmatrix}
-0 & -1 \\
-1 & 0
-\end{pmatrix}.
+S=\begin{pmatrix}2&0\\0&1\end{pmatrix},\qquad
+R=\begin{pmatrix}0&-1\\1&0\end{pmatrix},\qquad
+x=\begin{pmatrix}1\\2\end{pmatrix}.
 $$
 
-The matrix S describes nonuniform scaling, while R describes a 90^\circ counterclockwise rotation. For
-
-$$
-x=
-\begin{pmatrix}
-1 \\
-2
-\end{pmatrix},
-$$
-
-compute RSx and SRx. Compare the results and explain geometrically why the order matters.
+S describes horizontal scaling by 2, while R describes a 90° counterclockwise rotation. Compute RSx and SRx, compare the results, and explain why the order matters.
 
 **Solution**
 
-**1. Calculate RSx**
-
-First apply S to x:
+**Calculate RSx: scale first, then rotate.**
 
 $$
-Sx=
-\begin{pmatrix}
-2 & 0 \\
-0 & 1
-\end{pmatrix}
-\begin{pmatrix}
-1 \\
-2
-\end{pmatrix}
-=
-\begin{pmatrix}
-2 \\
-2
-\end{pmatrix}.
+Sx=\begin{pmatrix}2(1)+0(2)\\0(1)+1(2)\end{pmatrix}=\begin{pmatrix}2\\2\end{pmatrix}.
 $$
 
-Then rotate the result using R:
+Then calculate each row-by-column product for R(Sx):
 
 $$
-RSx=
-\begin{pmatrix}
-0 & -1 \\
-1 & 0
-\end{pmatrix}
-\begin{pmatrix}
-2 \\
-2
-\end{pmatrix}
-=
-\begin{pmatrix}
--2 \\
-2
-\end{pmatrix}.
+RSx=\begin{pmatrix}0(2)+(-1)(2)\\1(2)+0(2)\end{pmatrix}=\begin{pmatrix}-2\\2\end{pmatrix}.
 $$
 
-**2. Calculate SRx**
-
-First rotate x:
+**Calculate SRx: rotate first, then scale.**
 
 $$
-Rx=
-\begin{pmatrix}
-0 & -1 \\
-1 & 0
-\end{pmatrix}
-\begin{pmatrix}
-1 \\
-2
-\end{pmatrix}
-=
-\begin{pmatrix}
--2 \\
-1
-\end{pmatrix}.
+Rx=\begin{pmatrix}0(1)+(-1)(2)\\1(1)+0(2)\end{pmatrix}=\begin{pmatrix}-2\\1\end{pmatrix}.
 $$
 
-Then apply the scaling:
+Then apply S:
 
 $$
-SRx=
-\begin{pmatrix}
-2 & 0 \\
-0 & 1
-\end{pmatrix}
-\begin{pmatrix}
--2 \\
-1
-\end{pmatrix}
-=
-\begin{pmatrix}
--4 \\
-1
-\end{pmatrix}.
+SRx=\begin{pmatrix}2(-2)+0(1)\\0(-2)+1(1)\end{pmatrix}=\begin{pmatrix}-4\\1\end{pmatrix}.
 $$
 
-The results are different:
+Thus,
 
 $$
-RSx=
-\begin{pmatrix}-2\\2\end{pmatrix},
-\qquad
-SRx=
-\begin{pmatrix}-4\\1\end{pmatrix}.
+RSx=\begin{pmatrix}-2\\2\end{pmatrix},\qquad
+SRx=\begin{pmatrix}-4\\1\end{pmatrix}.
 $$
 
-Scaling first and then rotating is not the same as rotating first and then scaling. The scaling changes horizontal coordinates but not vertical coordinates, so changing when it is applied changes the final vector.
-
----
+The results differ because S doubles only the horizontal coordinate. In RSx, the vector is scaled before it is rotated; in SRx, it is rotated first and the resulting horizontal coordinate is then doubled. The horizontal-only scaling therefore produces different final vectors depending on the order.

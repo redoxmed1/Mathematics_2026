@@ -4,7 +4,7 @@
 
 For
 
-$$
+\[
 A=
 \begin{pmatrix}
 2 & 1 \\
@@ -16,7 +16,7 @@ B=
 1 & -1 \\
 -1 & 2
 \end{pmatrix},
-$$
+\]
 
 check, without using a formula, whether B = A⁻¹. Compute AB and BA and relate the result to the definition of the inverse.
 
@@ -26,7 +26,7 @@ A matrix B is the inverse of A if multiplying in either order gives the identity
 
 First calculate AB:
 
-$$
+\[
 AB=
 \begin{pmatrix}
 2(1)+1(-1) & 2(-1)+1(2) \\
@@ -38,11 +38,11 @@ AB=
 0 & 1
 \end{pmatrix}
 =I.
-$$
+\]
 
 Now calculate BA:
 
-$$
+\[
 BA=
 \begin{pmatrix}
 1(2)+(-1)(1) & 1(1)+(-1)(1) \\
@@ -54,13 +54,13 @@ BA=
 0 & 1
 \end{pmatrix}
 =I.
-$$
+\]
 
 Both products equal the identity matrix. Therefore, B is the inverse of A:
 
-$$
+\[
 B=A^{-1}.
-$$
+\]
 
 This verifies the definition directly, without using the 2 × 2 inverse formula.
 

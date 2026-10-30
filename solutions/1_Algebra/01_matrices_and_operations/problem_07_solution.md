@@ -5,98 +5,54 @@
 For
 
 $$
-A=
-\begin{pmatrix}
+A=\begin{pmatrix}
 2 & 1 \\
 0 & 2
 \end{pmatrix},
 $$
 
-compute AI, IA, A+0, A², and A³. Explain the roles of the identity matrix I and the zero matrix 0, and describe the pattern in successive powers of A.
+compute AI, IA, A + 0, A², and A³. Explain the roles of I and 0, and describe the pattern in successive powers of A.
 
 **Solution**
 
-For 2× 2 matrices, the identity and zero matrices are
-
 $$
-I=
-\begin{pmatrix}
-1 & 0 \\
-0 & 1
-\end{pmatrix},
-\qquad
-0=
-\begin{pmatrix}
-0 & 0 \\
-0 & 0
-\end{pmatrix}.
+I=\begin{pmatrix}1&0\\0&1\end{pmatrix},\qquad
+0=\begin{pmatrix}0&0\\0&0\end{pmatrix}.
 $$
 
-**1. Identity products**
-
-Multiplication by I leaves a matrix unchanged:
+Multiplication by the identity matrix and addition of the zero matrix leave A unchanged:
 
 $$
-AI=A,\qquad IA=A.
+AI=IA=A+0=\begin{pmatrix}2&1\\0&2\end{pmatrix}.
 $$
 
-Hence,
+**Calculate A² row by column.**
 
 $$
-AI=IA=
-\begin{pmatrix}
-2 & 1 \\
-0 & 2
-\end{pmatrix}.
-$$
-
-**2. Addition of the zero matrix**
-
-Adding zero changes no entry:
-
-$$
-A+0=
-\begin{pmatrix}
-2+0 & 1+0 \\
-0+0 & 2+0
-\end{pmatrix}
-=
-\begin{pmatrix}
-2 & 1 \\
-0 & 2
-\end{pmatrix}.
-$$
-
-**3. Calculate A²**
-
-$$
-A^2=AA=
-\begin{pmatrix}
+A^2=\begin{pmatrix}
 2(2)+1(0) & 2(1)+1(2) \\
 0(2)+2(0) & 0(1)+2(2)
 \end{pmatrix}
-=
-\begin{pmatrix}
-4 & 4 \\
-0 & 4
-\end{pmatrix}.
+=\begin{pmatrix}4&4\\0&4\end{pmatrix}.
 $$
 
-**4. Calculate A³**
+**Calculate A³ row by column.**
 
 $$
-A^3=A^2A=
-\begin{pmatrix}
+A^3=A^2A=\begin{pmatrix}
 4(2)+4(0) & 4(1)+4(2) \\
 0(2)+4(0) & 0(1)+4(2)
 \end{pmatrix}
-=
-\begin{pmatrix}
-8 & 12 \\
-0 & 8
-\end{pmatrix}.
+=\begin{pmatrix}8&12\\0&8\end{pmatrix}.
 $$
 
-The identity matrix is the multiplicative identity, since multiplying by it leaves a matrix unchanged. The zero matrix is the additive identity, since adding it leaves a matrix unchanged. The diagonal entries of these powers are 2^n, while the top-right entries are n2^n-1 for the powers shown: 1, 4, 12. This pattern is consistent with the displayed values.
+The diagonal entries of Aⁿ are 2ⁿ. The upper-right entry follows the formula n·2ⁿ⁻¹, for n ≥ 1:
 
----
+$$
+A^n=\begin{pmatrix}
+2^n & n2^{n-1} \\
+0 & 2^n
+\end{pmatrix},\qquad n\geq1.
+$$
+
+For n = 1, the upper-right entry is 1·2⁰ = 1; for n = 2 it is 2·2¹ = 4; for n = 3 it is 3·2² = 12. These values agree with A, A², and A³. The identity matrix is the multiplicative identity, while the zero matrix is the additive identity.

@@ -106,3 +106,5 @@ $$
 $$
 
 Matrix addition and subtraction require the same number of rows and columns because each entry must have a corresponding entry in the other matrix. Here, all operations are valid because both matrices are 2× 2.
+
+---

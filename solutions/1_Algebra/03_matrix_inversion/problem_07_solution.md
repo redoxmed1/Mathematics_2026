@@ -3,112 +3,144 @@
 
 **Problem**
 
-Given the matrices:
+Given the matrices A and B:
 
-A = ⎛ 1  1 ⎞
-    ⎝ 0  1 ⎠
+Matrix A:
 
-B = ⎛ 2  0 ⎞
-    ⎝ 0  3 ⎠
+    | 1  1 |
+    | 0  1 |
 
-Calculate (AB)⁻¹ and B⁻¹A⁻¹. Check that both results are equal and explain why the inverse of a product reverses the order of the factors.
+Matrix B:
+
+    | 2  0 |
+    | 0  3 |
+
+Calculate the inverse of AB and calculate B inverse multiplied by A inverse. Check that both results are equal and explain why the inverse of a product reverses the order of the factors.
 
 **Solution**
 
 **1. Calculate AB**
 
-Multiply the rows of A by the columns of B:
+Multiply the rows of A by the columns of B.
 
-AB = ⎛ 1(2)+1(0)   1(0)+1(3) ⎞
-     ⎝ 0(2)+1(0)   0(0)+1(3) ⎠
+    AB =
 
-AB = ⎛ 2  3 ⎞
-     ⎝ 0  3 ⎠
-
-**2. Calculate (AB)⁻¹**
-
-First calculate the determinant:
-
-det(AB) = 2(3) - 3(0) = 6
-
-Since the determinant is not zero, the inverse exists.
-
-Using the inverse formula for a 2 × 2 matrix:
-
-             1    ⎛  d   -b ⎞
-A⁻¹ = ─────────── ⎜         ⎟
-       ad - bc    ⎝ -c    a ⎠
-
-Therefore:
-
-          1    ⎛  3  -3 ⎞
-(AB)⁻¹ = ───   ⎜       ⎟
-          6    ⎝  0   2 ⎠
-
-(AB)⁻¹ = ⎛  1/2  -1/2 ⎞
-          ⎝   0    1/3 ⎠
-
-**3. Calculate A⁻¹ and B⁻¹ separately**
-
-For matrix A:
-
-det(A) = 1(1) - 1(0) = 1
-
-Therefore:
-
-A⁻¹ = ⎛ 1  -1 ⎞
-      ⎝ 0   1 ⎠
-
-For matrix B:
-
-det(B) = 2(3) - 0(0) = 6
-
-Therefore:
-
-B⁻¹ = ⎛ 1/2   0   ⎞
-      ⎝  0   1/3  ⎠
-
-**4. Calculate B⁻¹A⁻¹**
-
-Multiply the inverses in the reversed order:
-
-B⁻¹A⁻¹ = ⎛ 1/2   0  ⎞ ⎛ 1  -1 ⎞
-          ⎝  0   1/3 ⎠ ⎝ 0   1 ⎠
-
-Multiply rows by columns:
-
-B⁻¹A⁻¹ = ⎛ (1/2)(1)+(0)(0)    (1/2)(-1)+(0)(1) ⎞
-          ⎝ (0)(1)+(1/3)(0)   (0)(-1)+(1/3)(1) ⎠
+    | 1(2) + 1(0)    1(0) + 1(3) |
+    | 0(2) + 1(0)    0(0) + 1(3) |
 
 Simplifying:
 
-B⁻¹A⁻¹ = ⎛ 1/2  -1/2 ⎞
-          ⎝  0    1/3 ⎠
+    AB =
 
-Both methods give the same result:
+    | 2  3 |
+    | 0  3 |
 
-(AB)⁻¹ = B⁻¹A⁻¹
+**2. Calculate the inverse of AB**
 
-**5. Explanation of the reversed order**
+First calculate the determinant:
 
-When we calculate ABx, matrix B acts on the vector x first, and then matrix A acts on the result.
+    det AB = 2 × 3 - 3 × 0
+           = 6
 
-To undo these operations, we must reverse their order.
+Since the determinant is nonzero, the inverse exists.
 
-First, we undo A using A⁻¹. Then, we undo B using B⁻¹.
+For a 2 × 2 matrix, the inverse formula is:
+
+    | a  b | inverse = 1/(ad - bc) × |  d  -b |
+    | c  d |                         | -c   a |
+
+Applying the formula:
+
+    AB inverse = 1/6 ×
+
+    | 3  -3 |
+    | 0   2 |
 
 Therefore:
 
-A⁻¹(ABx) = Bx
+    AB inverse =
 
-B⁻¹(A⁻¹(ABx)) = x
+    |  1/2  -1/2 |
+    |   0    1/3 |
 
-This proves that:
+**3. Calculate A inverse and B inverse separately**
 
-(AB)⁻¹ = B⁻¹A⁻¹
+For matrix A:
+
+    det A = 1 × 1 - 1 × 0
+          = 1
+
+Therefore:
+
+    A inverse =
+
+    | 1  -1 |
+    | 0   1 |
+
+For matrix B:
+
+    det B = 2 × 3 - 0 × 0
+          = 6
+
+Therefore:
+
+    B inverse =
+
+    | 1/2   0   |
+    |  0   1/3  |
+
+**4. Calculate B inverse multiplied by A inverse**
+
+The inverse of a product requires reversing the order.
+
+    B inverse × A inverse =
+
+    | 1/2   0   |   | 1  -1 |
+    |  0   1/3  | × | 0   1 |
+
+Multiply rows by columns:
+
+    | (1/2 × 1) + (0 × 0)     (1/2 × -1) + (0 × 1) |
+    | (0 × 1) + (1/3 × 0)     (0 × -1) + (1/3 × 1) |
+
+Simplifying:
+
+    B inverse × A inverse =
+
+    |  1/2  -1/2 |
+    |   0    1/3 |
+
+Both methods give exactly the same result.
+
+    Inverse of AB =
+
+    |  1/2  -1/2 |
+    |   0    1/3 |
+
+**5. Explain why the order is reversed**
+
+When calculating ABx, matrix B acts on vector x first, and then matrix A acts on the result.
+
+To undo these operations, we must reverse their order.
+
+First, we undo A using A inverse.
+
+Then, we undo B using B inverse.
+
+The calculation is:
+
+    A inverse × ABx = Bx
+
+    B inverse × A inverse × ABx = x
+
+Therefore:
+
+    Inverse of AB = B inverse × A inverse
 
 **Conclusion**
 
-The inverse of a product reverses the order of the original matrices because the last transformation applied must be the first one undone. The calculations confirm that both methods produce the same inverse matrix.
+The inverse of a product reverses the order of the original matrices because the last transformation applied must be the first one undone.
+
+The calculations confirm that both methods produce the same inverse matrix.
 
 

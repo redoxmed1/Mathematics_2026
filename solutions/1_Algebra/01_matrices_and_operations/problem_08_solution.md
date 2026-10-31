@@ -15,11 +15,12 @@ $$
 
 perform, in order:
 
-1. R_2arrow R_2-2R_1,
-2. R_3arrow R_3+R_1,
-3. interchange R_2 and R_3.
+1. R₂ → R₂ − 2R₁
+2. R₃ → R₃ + R₁
+3. Interchange R₂ and R₃.
 
-Write the matrix after each step. For each operation, state an operation that reverses it.
+Write the matrix after each step. Then, for each operation,
+state an operation that reverses it.
 
 **Solution**
 
@@ -31,18 +32,23 @@ A=
 1 & 2 & -1 \\
 2 & 4 & 1 \\
 -1 & 1 & 3
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
-**Step 1: R_2arrow R_2-2R_1**
+**Step 1: R₂ → R₂ − 2R₁**
 
-The new second row is
+Replace the second row by the second row minus twice
+the first row.
 
 $$
-(2,4,1)-2(1,2,-1)=(0,0,3).
+R_2=(2,4,1)-2(1,2,-1)
 $$
 
-Therefore, the matrix becomes
+$$
+R_2=(0,0,3)
+$$
+
+The resulting matrix is
 
 $$
 A_1=
@@ -50,20 +56,26 @@ A_1=
 1 & 2 & -1 \\
 0 & 0 & 3 \\
 -1 & 1 & 3
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
-The reverse operation is R_2arrow R_2+2R_1.
+The reverse operation is:
 
-**Step 2: R_3arrow R_3+R_1**
+R₂ → R₂ + 2R₁
 
-Using the current first and third rows,
+**Step 2: R₃ → R₃ + R₁**
+
+Replace the third row by the third row plus the first row.
 
 $$
-(-1,1,3)+(1,2,-1)=(0,3,2).
+R_3=(-1,1,3)+(1,2,-1)
 $$
 
-The matrix becomes
+$$
+R_3=(0,3,2)
+$$
+
+The resulting matrix is
 
 $$
 A_2=
@@ -71,14 +83,16 @@ A_2=
 1 & 2 & -1 \\
 0 & 0 & 3 \\
 0 & 3 & 2
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
-The reverse operation is R_3arrow R_3-R_1.
+The reverse operation is:
 
-**Step 3: interchange R_2 and R_3**
+R₃ → R₃ − R₁
 
-Swap the second and third rows:
+**Step 3: Interchange R₂ and R₃**
+
+Swap the second and third rows.
 
 $$
 A_3=
@@ -86,9 +100,18 @@ A_3=
 1 & 2 & -1 \\
 0 & 3 & 2 \\
 0 & 0 & 3
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
-The reverse operation is to interchange R_2 and R_3 again. Each operation is reversible because adding back the subtracted row multiple, subtracting the added row, or swapping the same two rows restores the preceding matrix.
+The reverse operation is to interchange R₂ and R₃ again.
 
----
+**Conclusion**
+
+Each row operation is reversible.
+
+- Subtracting twice the first row is reversed by adding twice the first row.
+- Adding the first row is reversed by subtracting the first row.
+- Swapping two rows is reversed by performing the same swap again.
+
+These operations demonstrate that elementary row operations
+are controlled and reversible transformations of a matrix.

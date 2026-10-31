@@ -1,98 +1,100 @@
+
 ### Exercise 7. Inverse of a Product
 
 **Problem**
 
-For
+For the matrices
 
-$$
-A=
-\begin{pmatrix}
-1 & 1 \\
-0 & 1
-\end{pmatrix},
-\qquad
-B=
-\begin{pmatrix}
-2 & 0 \\
-0 & 3
-\end{pmatrix},
-$$
+A = [[1, 1], [0, 1]]
 
-compute (AB)⁻¹ and B⁻¹A⁻¹. Check that the results are the same and explain the meaning of the reversed order.
+B = [[2, 0], [0, 3]]
+
+Compute (AB)^-1 and B^-1 A^-1. Check that the results are the same and explain why the inverse of a product reverses the order of the factors.
 
 **Solution**
 
-First calculate AB:
+**1. Calculate AB**
 
-$$
-AB=
-\begin{pmatrix}
-1(2)+1(0) & 1(0)+1(3) \\
-0(2)+1(0) & 0(0)+1(3)
-\end{pmatrix}
-=
-\begin{pmatrix}
-2 & 3 \\
-0 & 3
-\end{pmatrix}.
-$$
+Multiply the rows of A by the columns of B:
 
-The determinant is 2(3) − 3(0) = 6. Thus,
+AB = [[1(2)+1(0), 1(0)+1(3)],
+      [0(2)+1(0), 0(0)+1(3)]]
 
-$$
-(AB)^{-1}
-=\frac16
-\begin{pmatrix}
-3 & -3 \\
-0 & 2
-\end{pmatrix}
-=
-\begin{pmatrix}
-\frac12 & -\frac12 \\
-0 & \frac13
-\end{pmatrix}.
-$$
+AB = [[2, 3],
+      [0, 3]]
 
-Now calculate the inverses separately:
+**2. Calculate (AB)^-1**
 
-$$
-A^{-1}=
-\begin{pmatrix}
-1 & -1 \\
-0 & 1
-\end{pmatrix},
-\qquad
-B^{-1}=
-\begin{pmatrix}
-\frac12 & 0 \\
-0 & \frac13
-\end{pmatrix}.
-$$
+First calculate the determinant:
 
-Multiply them in the reversed order:
+det(AB) = 2(3) - 3(0) = 6
 
-$$
-B^{-1}A^{-1}
-=
-\begin{pmatrix}
-\frac12(1)+0(0) &
-\frac12(-1)+0(1) \\
-0(1)+\frac13(0) &
-0(-1)+\frac13(1)
-\end{pmatrix}
-=
-\begin{pmatrix}
-\frac12 & -\frac12 \\
-0 & \frac13
-\end{pmatrix}.
-$$
+Since the determinant is nonzero, the inverse exists.
 
-Therefore,
+Using the 2 x 2 inverse formula:
 
-$$
-(AB)^{-1}=B^{-1}A^{-1}.
-$$
+(AB)^-1 = (1/6) [[3, -3],
+                  [0,  2]]
 
-The order is reversed because to undo the operation AB, the transformation B is undone first and then A. In general, the inverse of a product reverses the order of the factors.
+Therefore:
 
----
+(AB)^-1 = [[1/2, -1/2],
+           [0,    1/3]]
+
+**3. Calculate A^-1 and B^-1 separately**
+
+For A:
+
+det(A) = 1(1) - 1(0) = 1
+
+A^-1 = [[1, -1],
+        [0,  1]]
+
+For B:
+
+det(B) = 2(3) - 0(0) = 6
+
+B^-1 = [[1/2, 0],
+        [0, 1/3]]
+
+**4. Calculate B^-1 A^-1**
+
+Multiply the inverses in the reversed order:
+
+B^-1 A^-1 = [[1/2, 0],
+              [0, 1/3]]
+             [[1, -1],
+              [0,  1]]
+
+B^-1 A^-1 = [[1/2(1)+0(0), 1/2(-1)+0(1)],
+              [0(1)+1/3(0), 0(-1)+1/3(1)]]
+
+B^-1 A^-1 = [[1/2, -1/2],
+              [0,    1/3]]
+
+Both methods give the same result:
+
+(AB)^-1 = B^-1 A^-1
+
+**5. Explanation of the reversed order**
+
+When we calculate ABx, the matrix B acts on the vector x first, and then A acts on the result.
+
+To undo these operations, we must reverse their order.
+
+First, A is undone using A^-1. Then, B is undone using B^-1.
+
+Therefore:
+
+A^-1(ABx) = Bx
+
+B^-1(A^-1(ABx)) = x
+
+This gives the inverse product:
+
+(AB)^-1 = B^-1 A^-1
+
+**Conclusion**
+
+The inverse of a product reverses the order of the original matrices because the last transformation applied must be the first one undone. The calculations confirm that both methods produce the same inverse matrix.
+

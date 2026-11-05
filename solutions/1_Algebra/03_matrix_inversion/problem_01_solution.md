@@ -40,6 +40,7 @@ AB=
 =I.
 $$
 
+
 Now calculate BA:
 
 $$

@@ -1,190 +1,128 @@
 
-# Exercise 6 – Solving a System Using the Inverse
+# Exercise 6: Solving a System Using the Inverse
 
 ## Problem
 
-Solve the matrix equation \(Ax=b\) using the inverse matrix method:
+Solve the equation Ax = b using the inverse matrix method.
 
-\[
-A =
-\begin{pmatrix}
-2 & 1 \\
-1 & 3
-\end{pmatrix},
-\qquad
-b =
-\begin{pmatrix}
-5 \\
-7
-\end{pmatrix}
-\]
+Given:
+
+$$
+A = \begin{pmatrix} 2 & 1 \\ 1 & 3 \end{pmatrix}
+$$
+
+$$
+b = \begin{pmatrix} 5 \\ 7 \end{pmatrix}
+$$
 
 Use the formula:
 
-\[
-x=A^{-1}b
-\]
+$$
+x = A^{-1}b
+$$
 
-Then substitute the resulting vector into the original equation to verify the answer.
+Then substitute the result into the original equation to check the answer.
 
 ---
 
 ## Solution
 
-### 1. Calculate the determinant
+### Step 1: Calculate the determinant
 
-First, calculate the determinant of matrix \(A\):
+$$
+\det(A) = 2(3) - 1(1)
+$$
 
-\[
-\det(A)=2(3)-1(1)
-\]
+$$
+\det(A) = 6 - 1 = 5
+$$
 
-\[
-\det(A)=6-1=5
-\]
+Since the determinant is not zero, the inverse matrix exists.
 
-Since the determinant is not zero, matrix \(A\) is invertible.
+### Step 2: Calculate the inverse matrix
 
-### 2. Calculate the inverse matrix
+The inverse formula for a 2x2 matrix is:
 
-For a \(2\times2\) matrix, the inverse formula is:
+$$
+A^{-1} = \frac{1}{ad-bc}
+\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
+$$
 
-\[
-A^{-1}=\frac{1}{ad-bc}
-\begin{pmatrix}
-d & -b\\
--c & a
-\end{pmatrix}
-\]
+Substitute the values:
 
-Substituting the values:
+$$
+A^{-1} = \frac{1}{5}
+\begin{pmatrix} 3 & -1 \\ -1 & 2 \end{pmatrix}
+$$
 
-\[
-A^{-1}=
-\frac{1}{5}
-\begin{pmatrix}
-3 & -1\\
--1 & 2
-\end{pmatrix}
-\]
+### Step 3: Calculate x = A^-1 b
 
-### 3. Find the solution using \(x=A^{-1}b\)
+$$
+x = \frac{1}{5}
+\begin{pmatrix} 3 & -1 \\ -1 & 2 \end{pmatrix}
+\begin{pmatrix} 5 \\ 7 \end{pmatrix}
+$$
 
-Multiply the inverse matrix by vector \(b\):
+Multiply the matrices:
 
-\[
-x=
-\frac{1}{5}
-\begin{pmatrix}
-3 & -1\\
--1 & 2
-\end{pmatrix}
-\begin{pmatrix}
-5\\
-7
-\end{pmatrix}
-\]
+$$
+x = \frac{1}{5}
+\begin{pmatrix} 3(5)-1(7) \\ -1(5)+2(7) \end{pmatrix}
+$$
 
-Calculate each entry:
+$$
+x = \frac{1}{5}
+\begin{pmatrix} 8 \\ 9 \end{pmatrix}
+$$
 
-\[
-x=
-\frac{1}{5}
-\begin{pmatrix}
-3(5)-1(7)\\
--1(5)+2(7)
-\end{pmatrix}
-\]
+Therefore:
 
-\[
-x=
-\frac{1}{5}
-\begin{pmatrix}
-8\\
-9
-\end{pmatrix}
-\]
-
-Therefore, the solution is:
-
-\[
-\boxed{
-x=
-\begin{pmatrix}
-\frac{8}{5}\\
-\frac{9}{5}
-\end{pmatrix}
-}
-\]
+$$
+x = \begin{pmatrix} 8/5 \\ 9/5 \end{pmatrix}
+$$
 
 ---
 
 ## Verification
 
-To verify the solution, substitute the calculated vector into the original equation \(Ax=b\):
+Substitute the result into the original equation Ax = b:
 
-\[
-\begin{pmatrix}
-2 & 1\\
-1 & 3
-\end{pmatrix}
-\begin{pmatrix}
-\frac{8}{5}\\
-\frac{9}{5}
-\end{pmatrix}
-=
-\begin{pmatrix}
-5\\
-7
-\end{pmatrix}
-\]
+$$
+Ax =
+\begin{pmatrix} 2 & 1 \\ 1 & 3 \end{pmatrix}
+\begin{pmatrix} 8/5 \\ 9/5 \end{pmatrix}
+$$
 
 Calculate each entry:
 
-\[
-=
+$$
+Ax =
 \begin{pmatrix}
-2(\frac{8}{5})+\frac{9}{5}\\
-\frac{8}{5}+3(\frac{9}{5})
+2(8/5)+9/5 \\
+8/5+3(9/5)
 \end{pmatrix}
-\]
+$$
 
-\[
-=
+$$
+Ax =
 \begin{pmatrix}
-\frac{16}{5}+\frac{9}{5}\\
-\frac{8}{5}+\frac{27}{5}
+25/5 \\
+35/5
 \end{pmatrix}
-=
-\begin{pmatrix}
-\frac{25}{5}\\
-\frac{35}{5}
-\end{pmatrix}
-\]
+$$
 
-\[
-=
-\begin{pmatrix}
-5\\
-7
-\end{pmatrix}
-=b
-\]
+$$
+Ax = \begin{pmatrix} 5 \\ 7 \end{pmatrix} = b
+$$
 
-The substitution gives the original vector \(b\), which confirms that the solution is correct.
+The result is equal to the original vector b, so the solution is correct.
 
 ---
 
 ## Final Answer
 
-\[
-\boxed{
-x=
-\begin{pmatrix}
-\frac{8}{5}\\
-\frac{9}{5}
-\end{pmatrix}
-}
-\]
+$$
+x = \begin{pmatrix} 8/5 \\ 9/5 \end{pmatrix}
+$$
 
-**Conclusion:** The system has a unique solution, and the verification confirms that the calculated vector is correct.
+**Conclusion:** The system has a unique solution, and substitution confirms that the answer is correct.

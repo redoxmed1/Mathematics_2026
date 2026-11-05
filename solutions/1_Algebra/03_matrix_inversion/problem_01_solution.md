@@ -25,19 +25,16 @@ A matrix B is the inverse of A if multiplying in either order gives the identity
 First calculate AB:
 
 $$
-AB=
-\begin{pmatrix}
-2(1)+1(-1) & 2(-1)+1(2) \\
+AB=\begin{pmatrix}
+2(1)+1(-1) & 2(-1)+1(2)\\
 1(1)+1(-1) & 1(-1)+1(2)
 \end{pmatrix}
 =
 \begin{pmatrix}
-1 & 0 \\
+1 & 0\\
 0 & 1
-\end{pmatrix}
-=I.
+\end{pmatrix}=I.
 $$
-
 
 Now calculate BA:
 

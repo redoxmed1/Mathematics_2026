@@ -1,82 +1,161 @@
-### Exercise 2. Formula for a 2×2 Matrix
 
-**Problem**
+# Exercise 2 – Formula for a 2×2 Matrix
 
-Find the inverse of
+## Problem
+
+Find the inverse of the following matrix using the formula for a 2×2 matrix. At the end, verify the result by computing one product with the original matrix.
 
 $$
-A=
+A =
 \begin{pmatrix}
 3 & 2 \\
 5 & 4
 \end{pmatrix}
 $$
 
-using the formula for a 2 × 2 matrix. At the end, check the result by computing one product with A.
+---
 
-**Solution**
+## Solution
 
-For a matrix
+### Step 1: Write the general formula
+
+For a 2×2 matrix:
 
 $$
+A =
 \begin{pmatrix}
 a & b \\
 c & d
-\end{pmatrix},
+\end{pmatrix}
 $$
 
-the determinant is ad − bc. If the determinant is nonzero, its inverse is
+The determinant is calculated using:
 
 $$
-A^{-1}=\frac{1}{ad-bc}
+\det(A) = ad - bc
+$$
+
+If the determinant is nonzero, the inverse matrix is:
+
+$$
+A^{-1} =
+\frac{1}{ad-bc}
 \begin{pmatrix}
 d & -b \\
 -c & a
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
-For the given matrix,
+### Step 2: Calculate the determinant
+
+For the given matrix:
 
 $$
-\det A=3(4)-2(5)=12-10=2.
+a=3,\quad b=2,\quad c=5,\quad d=4
 $$
 
-Since the determinant is nonzero, the inverse exists. Substitute a = 3, b = 2, c = 5, and d = 4:
+Substitute these values into the determinant formula:
 
 $$
-A^{-1}
-=\frac{1}{2}
+\begin{aligned}
+\det(A) &= 3(4)-2(5) \\
+        &= 12-10 \\
+        &= 2
+\end{aligned}
+$$
+
+Since the determinant is equal to 2 and is not zero, the inverse matrix exists.
+
+### Step 3: Calculate the inverse matrix
+
+Substitute the values into the inverse formula:
+
+$$
+A^{-1} =
+\frac{1}{2}
 \begin{pmatrix}
 4 & -2 \\
 -5 & 3
 \end{pmatrix}
-=
+$$
+
+Multiply every element by $\frac{1}{2}$:
+
+$$
+\boxed{
+A^{-1} =
 \begin{pmatrix}
 2 & -1 \\
 -\frac{5}{2} & \frac{3}{2}
-\end{pmatrix}.
+\end{pmatrix}
+}
 $$
 
-**Verification**
+---
 
-Multiply A by the proposed inverse:
+## Verification
+
+To verify the result, multiply the original matrix by the calculated inverse:
 
 $$
-AA^{-1}
+AA^{-1} =
+\begin{pmatrix}
+3 & 2 \\
+5 & 4
+\end{pmatrix}
+\begin{pmatrix}
+2 & -1 \\
+-\frac{5}{2} & \frac{3}{2}
+\end{pmatrix}
+$$
+
+Calculate each entry:
+
+$$
 =
 \begin{pmatrix}
-3(2)+2\left(-\frac{5}{2}\right) &
-3(-1)+2\left(\frac{3}{2}\right) \\
-5(2)+4\left(-\frac{5}{2}\right) &
-5(-1)+4\left(\frac{3}{2}\right)
+3(2)+2(-\frac{5}{2}) &
+3(-1)+2(\frac{3}{2}) \\
+5(2)+4(-\frac{5}{2}) &
+5(-1)+4(\frac{3}{2})
 \end{pmatrix}
+$$
+
+Simplify:
+
+$$
 =
+\begin{pmatrix}
+6-5 & -3+3 \\
+10-10 & -5+6
+\end{pmatrix}
+$$
+
+Therefore:
+
+$$
+\boxed{
+AA^{-1} =
 \begin{pmatrix}
 1 & 0 \\
 0 & 1
-\end{pmatrix}.
+\end{pmatrix}
+= I
+}
 $$
 
-The product is I, so the calculated inverse is correct.
+Since the product is the identity matrix $I$, the calculated inverse is correct.
 
 ---
+
+## Final Answer
+
+$$
+\boxed{
+A^{-1} =
+\begin{pmatrix}
+2 & -1 \\
+-\frac{5}{2} & \frac{3}{2}
+\end{pmatrix}
+}
+$$

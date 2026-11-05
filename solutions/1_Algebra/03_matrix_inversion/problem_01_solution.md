@@ -5,15 +5,13 @@
 For
 
 $$
-A=
-\begin{pmatrix}
-2 & 1 \\
+A=\begin{pmatrix}
+2 & 1\\
 1 & 1
 \end{pmatrix},
 \qquad
-B=
-\begin{pmatrix}
-1 & -1 \\
+B=\begin{pmatrix}
+1 & -1\\
 -1 & 2
 \end{pmatrix},
 $$

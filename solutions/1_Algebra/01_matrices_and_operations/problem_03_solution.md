@@ -1,32 +1,119 @@
-### Exercise 3. When is a matrix product defined?
+# Exercise 1 – Matrix Size and Entries
 
-## Question
+## Problem
 
-The matrices have dimensions
+Given
 
 $$
-A:2\times3,\qquad B:3\times4,\qquad
-C:4\times2,\qquad D:2\times2.
+A =
+\begin{pmatrix}
+2 & -1 & 3 \\
+0 & 4 & 5
+\end{pmatrix}
 $$
 
-Determine whether each product \(AB\), \(BA\), \(BC\), \(CB\), \(AC\), \(CA\), \(AD\), and \(DA\) is defined. For every defined product, give its dimensions.
+$$
+B =
+\begin{pmatrix}
+1 & 0 \\
+-2 & 3 \\
+4 & 1
+\end{pmatrix}
+$$
+
+1. State the sizes of matrices $A$ and $B$.
+2. Read off the entries $a_{12}$, $a_{23}$, $b_{21}$, and $b_{32}$.
+3. Write the second row of $A$ and the first column of $B$ as vectors.
+
+---
 
 ## Solution
 
-For a product \(XY\), the number of columns of \(X\) must equal the number of rows of \(Y\). If \(X\) is \(m\times n\) and \(Y\) is \(n\times p\), then \(XY\) is defined and has size \(m\times p\): the matching inner dimensions \(n\) are checked, while the outer dimensions give the result.
+### Step 1: State the matrix sizes
 
-1. **\(AB\):** \(A\) is \(2\times3\) and \(B\) is \(3\times4\). The inner dimensions match, \(3=3\), so \(AB\) is defined and has size \(2\times4\).
+The size of a matrix is given by the number of rows followed by the number of columns ($m \times n$).
+- Matrix $A$ has 2 rows and 3 columns.
+- Matrix $B$ has 3 rows and 2 columns.
 
-2. **\(BA\):** \(B\) is \(3\times4\) and \(A\) is \(2\times3\). The inner dimensions are \(4\) and \(2\), which do not match. Thus \(BA\) is not defined.
+Therefore:
 
-3. **\(BC\):** \(B\) is \(3\times4\) and \(C\) is \(4\times2\). The inner dimensions match, \(4=4\), so \(BC\) is defined and has size \(3\times2\).
+$$
+\text{Size of } A = 2 \times 3,
+\qquad
+\text{Size of } B = 3 \times 2
+$$
 
-4. **\(CB\):** \(C\) is \(4\times2\) and \(B\) is \(3\times4\). The inner dimensions are \(2\) and \(3\), which do not match. Thus \(CB\) is not defined.
+---
 
-5. **\(AC\):** \(A\) is \(2\times3\) and \(C\) is \(4\times2\). The inner dimensions are \(3\) and \(4\), which do not match. Thus \(AC\) is not defined.
+### Step 2: Read off the specified entries
 
-6. **\(CA\):** \(C\) is \(4\times2\) and \(A\) is \(2\times3\). The inner dimensions match, \(2=2\), so \(CA\) is defined and has size \(4\times3\).
+In notation $a_{ij}$ or $b_{ij}$, the first index $i$ indicates the row, and the second index $j$ indicates the column:
 
-7. **\(AD\):** \(A\) is \(2\times3\) and \(D\) is \(2\times2\). The inner dimensions are \(3\) and \(2\), which do not match. Thus \(AD\) is not defined.
+- $a_{12}$ is in row 1, column 2 of $A$:
 
-8. **\(DA\):** \(D\) is \(2\times2\) and \(A\) is \(2\times3\). The inner dimensions match, \(2=2\), so \(DA\) is defined and has size \(2\times3\).
+$$
+a_{12} = -1
+$$
+
+- $a_{23}$ is in row 2, column 3 of $A$:
+
+$$
+a_{23} = 5
+$$
+
+- $b_{21}$ is in row 2, column 1 of $B$:
+
+$$
+b_{21} = -2
+$$
+
+- $b_{32}$ is in row 3, column 2 of $B$:
+
+$$
+b_{32} = 1
+$$
+
+---
+
+### Step 3: Write the specified row and column vectors
+
+- The second row of $A$ written as a row vector:
+
+$$
+\text{Second row of } A =
+\begin{pmatrix}
+0 & 4 & 5
+\end{pmatrix}
+$$
+
+- The first column of $B$ written as a vertical column vector:
+
+$$
+\text{First column of } B =
+\begin{pmatrix}
+1 \\
+-2 \\
+4
+\end{pmatrix}
+$$
+
+---
+
+## Conclusion
+
+- Matrix $A$ is of size $2 \times 3$ and matrix $B$ is of size $3 \times 2$.
+- The requested entries are $a_{12} = -1$, $a_{23} = 5$, $b_{21} = -2$, and $b_{32} = 1$.
+- The second row of $A$ is 
+  $$
+  \begin{pmatrix}
+  0 & 4 & 5
+  \end{pmatrix}
+  $$ 
+  and the first column of $B$ is the vertical column vector 
+  $$
+  \begin{pmatrix}
+  1 \\
+  -2 \\
+  4
+  \end{pmatrix}
+  $$

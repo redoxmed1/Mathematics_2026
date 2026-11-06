@@ -1,67 +1,87 @@
-### Exercise 1. Matrix Size and Entries
+# Exercise 1 – Matrix Size and Entries
 
-**Problem**
+## Problem
 
 Given
 
 $$
-A=
-\begin{pmatrix}
-2 & -1 & 3 \\
-0 & 4 & 5
-\end{pmatrix},
-\qquad
-B=
-\begin{pmatrix}
-1 & 0 \\
--2 & 3 \\
-4 & 1
-\end{pmatrix}.
+A = \begin{pmatrix} 2 & -1 & 3 \\ 0 & 4 & 5 \end{pmatrix}
 $$
 
-1. State the sizes of matrices A and B.
-2. Read off the entries a_12, a_23, b_21, and b_32.
-3. Write the second row of A and the first column of B as vectors.
-
-**Solution**
-
-**1. Matrix sizes**
-
-The size of a matrix is the number of rows followed by the number of columns. Matrix A has 2 rows and 3 columns, while matrix B has 3 rows and 2 columns. Therefore,
-
 $$
-A\text{ is }2\times 3,
-\qquad
-B\text{ is }3\times 2.
+B = \begin{pmatrix} 1 & 0 \\ -2 & 3 \\ 4 & 1 \end{pmatrix}
 $$
 
-**2. Entries**
-
-In a_ij or b_ij, the first index gives the row and the second index gives the column.
-
-- a_12 is in row 1, column 2 of A, so a_12=-1.
-- a_23 is in row 2, column 3 of A, so a_23=5.
-- b_21 is in row 2, column 1 of B, so b_21=-2.
-- b_32 is in row 3, column 2 of B, so b_32=1.
-
-**3. Row and column vectors**
-
-The second row of A is
-
-$$
-\begin{pmatrix}0 & 4 & 5\end{pmatrix}.
-$$
-
-The first column of B is
-
-$$
-\begin{pmatrix}
-1 \\
--2 \\
-4
-\end{pmatrix}.
-$$
-
-The entries and vectors are read directly from the stated rows and columns.
+1. State the sizes of matrices $A$ and $B$.
+2. Read off the entries $a_{12}$, $a_{23}$, $b_{21}$, and $b_{32}$.
+3. Write the second row of $A$ and the first column of $B$ as vectors.
 
 ---
+
+## Solution
+
+### Step 1: State the matrix sizes
+
+The size of a matrix is given by the number of rows followed by the number of columns ($m \times n$).
+- Matrix $A$ has 2 rows and 3 columns.
+- Matrix $B$ has 3 rows and 2 columns.
+
+Therefore:
+
+$$
+\text{Size of } A = 2 \times 3, \qquad \text{Size of } B = 3 \times 2
+$$
+
+---
+
+### Step 2: Read off the specified entries
+
+In notation $a_{ij}$ or $b_{ij}$, the first index $i$ indicates the row, and the second index $j$ indicates the column:
+
+- $a_{12}$ is in row 1, column 2 of $A$:
+
+$$
+a_{12} = -1
+$$
+
+- $a_{23}$ is in row 2, column 3 of $A$:
+
+$$
+a_{23} = 5
+$$
+
+- $b_{21}$ is in row 2, column 1 of $B$:
+
+$$
+b_{21} = -2
+$$
+
+- $b_{32}$ is in row 3, column 2 of $B$:
+
+$$
+b_{32} = 1
+$$
+
+---
+
+### Step 3: Write the specified row and column vectors
+
+- The second row of $A$ written as a row vector:
+
+$$
+\text{Second row of } A = \begin{pmatrix} 0 & 4 & 5 \end{pmatrix}
+$$
+
+- The first column of $B$ written as a vertical column vector:
+
+$$
+\text{First column of } B = \begin{pmatrix} 1 \\ -2 \\ 4 \end{pmatrix}
+$$
+
+---
+
+## Conclusion
+
+- Matrix $A$ is of size $2 \times 3$ and matrix $B$ is of size $3 \times 2$.
+- The requested entries are $a_{12} = -1$, $a_{23} = 5$, $b_{21} = -2$, and $b_{32} = 1$.
+- The second row of $A$ is $\begin{pmatrix} 0 & 4 & 5 \end{pmatrix}$ and the first column of $B$ is the vertical column vector $\begin{pmatrix} 1 \\ -2 \\ 4 \end{pmatrix}$.

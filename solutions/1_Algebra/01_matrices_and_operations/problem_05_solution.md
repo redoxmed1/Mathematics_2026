@@ -74,13 +74,13 @@ $$
 
 ## Conclusion
 
-- The direct matrix-vector product is:
+The direct matrix-vector product is:
 
 $$
 Ax = \begin{pmatrix} 6 \\ 10 \end{pmatrix}
 $$
 
-- Expressed as a linear combination of the columns of $A$ using the components of $x$:
+Expressed as a linear combination of the columns of $A$ using the components of $x$:
 
 $$
 4 \begin{pmatrix} 2 \\ 1 \end{pmatrix} + 2 \begin{pmatrix} -1 \\ 3 \end{pmatrix} = \begin{pmatrix} 6 \\ 10 \end{pmatrix}

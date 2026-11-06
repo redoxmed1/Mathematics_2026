@@ -94,8 +94,7 @@ x \\
 y \\
 z \\
 \end{pmatrix}
-=
-\begin{pmatrix}
+=\begin{pmatrix}
 1-\frac{3}{t-1} \\
 \frac{1}{t-1} \\
 \frac{2}{t-1} \\

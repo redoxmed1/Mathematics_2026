@@ -5,13 +5,15 @@
 The matrices
 
 $$
-S =\begin{pmatrix}
-2 & 0\\
+S =
+\begin{pmatrix}
+2 & 0 \\
 0 & 1
 \end{pmatrix},
 \qquad
-H =\begin{pmatrix}
-1 & 1\\
+H =
+\begin{pmatrix}
+1 & 1 \\
 0 & 1
 \end{pmatrix}
 $$
@@ -33,8 +35,9 @@ Compare the results. Additionally, compute $H^{-1}S^{-1}$ and verify that using 
 Multiply matrix $H$ by matrix $S$:
 
 $$
-T = HS =\begin{pmatrix}
-1 & 1\\
+T = HS =
+\begin{pmatrix}
+1 & 1 \\
 0 & 1
 \end{pmatrix}
 \begin{pmatrix}
@@ -130,6 +133,8 @@ S^{-1}H^{-1} =
 \end{pmatrix}
 $$
 
+Simplify:
+
 $$
 S^{-1}H^{-1} =
 \begin{pmatrix}
@@ -166,7 +171,12 @@ H^{-1}S^{-1} =
 (1)\left(\frac{1}{2}\right) + (-1)(0) & (1)(0) + (-1)(1) \\
 (0)\left(\frac{1}{2}\right) + (1)(0) & (0)(0) + (1)(1)
 \end{pmatrix}
-=
+$$
+
+Simplify:
+
+$$
+H^{-1}S^{-1} =
 \begin{pmatrix}
 \frac{1}{2} & -1 \\
 0 & 1

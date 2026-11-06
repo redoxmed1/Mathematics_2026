@@ -104,8 +104,7 @@ x \\
 y \\
 z
 \end{pmatrix}
-=
-\begin{pmatrix}
+A=\begin{pmatrix}
 4 \\
 1 \\
 7

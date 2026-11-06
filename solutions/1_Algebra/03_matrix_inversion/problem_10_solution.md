@@ -1,4 +1,3 @@
-
 # Exercise 10 – Inverse of a Diagonal Matrix
 
 ## Problem
@@ -88,9 +87,9 @@ Calculate each diagonal entry:
 $$
 DD^{-1} =
 \begin{pmatrix}
-2(\frac{1}{2}) & 0 & 0 \\
-0 & (-3)(-\frac{1}{3}) & 0 \\
-0 & 0 & 5(\frac{1}{5})
+2\left(\frac{1}{2}\right) & 0 & 0 \\
+0 & (-3)\left(-\frac{1}{3}\right) & 0 \\
+0 & 0 & 5\left(\frac{1}{5}\right)
 \end{pmatrix}
 $$
 
@@ -128,7 +127,7 @@ A diagonal matrix cannot be inverted if one of its diagonal entries is zero.
 We can also verify this by calculating its determinant:
 
 $$
-\det(E) = 2(0)(5) = 0
+\det(E) = (2)(0)(5) = 0
 $$
 
 Since the determinant is zero, matrix E is not invertible.
@@ -153,4 +152,4 @@ $$
 
 - Matrix E is not invertible because one of its diagonal entries is zero.
 
-The multiplication DD inverse gives the identity matrix I, confirming the result.
+The multiplication $DD^{-1}$ gives the identity matrix $I$, confirming the result.

@@ -80,8 +80,7 @@ $$
 x \\
 y \\
 \end{pmatrix}
-=
-\begin{pmatrix}
+=\begin{pmatrix}
 1 \\
 1 \\
 \end{pmatrix}

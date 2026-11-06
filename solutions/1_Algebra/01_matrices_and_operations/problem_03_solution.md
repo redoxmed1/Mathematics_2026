@@ -101,19 +101,24 @@ $$
 
 ## Conclusion
 
-- Matrix $A$ is of size $2 \times 3$ and matrix $B$ is of size $3 \times 2$.
-- The requested entries are $a_{12} = -1$, $a_{23} = 5$, $b_{21} = -2$, and $b_{32} = 1$.
-- The second row of $A$ is 
-  $$
-  \begin{pmatrix}
-  0 & 4 & 5
-  \end{pmatrix}
-  $$ 
-  and the first column of $B$ is the vertical column vector 
-  $$
-  \begin{pmatrix}
-  1 \\
-  -2 \\
-  4
-  \end{pmatrix}
-  $$
+Matrix $A$ is of size $2 \times 3$ and matrix $B$ is of size $3 \times 2$.
+
+The requested entries are $a_{12} = -1$, $a_{23} = 5$, $b_{21} = -2$, and $b_{32} = 1$.
+
+The second row of $A$ is:
+
+$$
+\begin{pmatrix}
+0 & 4 & 5
+\end{pmatrix}
+$$
+
+And the first column of $B$ is the vertical column vector:
+
+$$
+\begin{pmatrix}
+1 \\
+-2 \\
+4
+\end{pmatrix}
+$$

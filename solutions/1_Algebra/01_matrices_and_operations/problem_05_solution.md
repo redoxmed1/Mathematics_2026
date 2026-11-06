@@ -87,14 +87,12 @@ $$
 The entries of $x$ are $4$ and $2$, so the matrix-vector product can be written as the linear combination $4a_1 + 2a_2$:
 
 $$
-Ax = 
-4
+Ax = 4
 \begin{pmatrix}
 2 \\
 1
 \end{pmatrix}
-+ 
-2
++ 2
 \begin{pmatrix}
 -1 \\
 3
@@ -148,8 +146,7 @@ $$
 2 \\
 1
 \end{pmatrix}
-+ 
-2
++ 2
 \begin{pmatrix}
 -1 \\
 3

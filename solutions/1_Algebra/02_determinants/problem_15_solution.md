@@ -1,70 +1,93 @@
-### Exercise 15. Combining Determinant Properties
+# Exercise 15 – Combining Determinant Properties
 
-**Problem**
+## Problem
 
-Let A and B be invertible 2 × 2 matrices with
+Let $A$ and $B$ be invertible $2 \times 2$ matrices with
 
 $$
-\det A=-2,
+\det(A) = -2,
 \qquad
-\det B=3.
+\det(B) = 3
 $$
 
-Without finding the entries of the matrices, compute
+Without finding the entries of the matrices, compute:
 
 $$
-\det\left(B^{-1}A^TB\right).
+\det\left(B^{-1}A^TB\right)
 $$
 
-State the determinant properties used in order and explain why the factors involving B eventually cancel.
+State the determinant properties used in order and explain why the factors involving $B$ eventually cancel.
 
-**Solution**
+---
 
-Use the determinant property for a product of square matrices:
+## Solution
 
-$$
-\det(XYZ)=\det X\det Y\det Z.
-$$
+### Step 1: Apply the multiplicative property of determinants
 
-Therefore,
+For any square matrices $X$, $Y$, and $Z$ of the same size, the determinant of a product satisfies:
 
 $$
-\det(B^{-1}A^TB)
-=
-\det(B^{-1})\det(A^T)\det(B).
+\det(XYZ) = \det(X) \det(Y) \det(Z)
 $$
 
-The determinant of an inverse is the reciprocal of the determinant:
+Applying this property to our expression:
 
 $$
-\det(B^{-1})=\frac{1}{\det B}=\frac{1}{3}.
+\det\left(B^{-1}A^TB\right) = \det\left(B^{-1}\right) \det\left(A^T\right) \det(B)
 $$
 
-A matrix and its transpose have the same determinant:
+---
+
+### Step 2: Evaluate each determinant component
+
+1. **Inverse property:** The determinant of an inverse matrix is the reciprocal of the determinant:
 
 $$
-\det(A^T)=\det A=-2.
+\det\left(B^{-1}\right) = \frac{1}{\det(B)} = \frac{1}{3}
 $$
 
-Substitute these values:
+2. **Transpose property:** A matrix and its transpose have equal determinants:
 
 $$
-\begin{aligned}
-\det(B^{-1}A^TB)
-&=\frac{1}{3}(-2)(3)
-\\
-&=-2.
-\end{aligned}
+\det\left(A^T\right) = \det(A) = -2
 $$
 
-The factors involving B cancel because the determinant of B⁻¹ is the reciprocal of the determinant of B:
+---
+
+### Step 3: Substitute and compute the final value
+
+Substitute the evaluated components into the product:
 
 $$
-\det(B^{-1})\det(B)=\frac{1}{3}(3)=1.
+\det\left(B^{-1}A^TB\right) = \left(\frac{1}{3}\right) (-2) (3)
 $$
 
-The final result is therefore
+Simplify the expression:
 
 $$
-\det(B^{-1}A^TB)=-2.
+\det\left(B^{-1}A^TB\right) = -2
+$$
+
+---
+
+### Step 4: Explain the cancellation of matrix B factors
+
+The factors involving $B$ cancel out because the determinant of $B^{-1}$ is the multiplicative inverse of the determinant of $B$:
+
+$$
+\det\left(B^{-1}\right) \det(B) = \left(\frac{1}{3}\right)(3) = 1
+$$
+
+Multiplying by $1$ leaves only the determinant of $A^T$.
+
+---
+
+## Conclusion
+
+- Using determinant properties, the expression breaks down into individual scalar determinants.
+- The terms involving matrix $B$ cancel out because $\det\left(B^{-1}\right)\det(B) = 1$.
+- The final computed value is:
+
+$$
+\det\left(B^{-1}A^TB\right) = -2
 $$

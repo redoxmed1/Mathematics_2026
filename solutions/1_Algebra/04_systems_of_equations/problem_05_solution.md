@@ -70,8 +70,7 @@ x \\
 y \\
 z \\
 \end{pmatrix}
-=
-\begin{pmatrix}
+=\begin{pmatrix}
 1+5t \\
 1-2t \\
 t \\

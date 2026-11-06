@@ -87,7 +87,8 @@ $$
 The entries of $x$ are $4$ and $2$, so the matrix-vector product can be written as the linear combination $4a_1 + 2a_2$:
 
 $$
-Ax = 4
+\begin{aligned}
+Ax &= 4
 \begin{pmatrix}
 2 \\
 1
@@ -97,12 +98,8 @@ Ax = 4
 -1 \\
 3
 \end{pmatrix}
-$$
-
-Perform the scalar multiplications:
-
-$$
-Ax =
+\\[6pt]
+&=
 \begin{pmatrix}
 8 \\
 4
@@ -112,16 +109,13 @@ Ax =
 -2 \\
 6
 \end{pmatrix}
-$$
-
-Add the vectors entry by entry:
-
-$$
-Ax =
+\\[6pt]
+&=
 \begin{pmatrix}
 6 \\
 10
 \end{pmatrix}
+\end{aligned}
 $$
 
 ---

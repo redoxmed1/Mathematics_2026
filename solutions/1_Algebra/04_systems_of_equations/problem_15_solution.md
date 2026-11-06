@@ -133,8 +133,7 @@ $$
 x \\
 y \\
 \end{pmatrix}
-=
-\begin{pmatrix}
+=\begin{pmatrix}
 2-t \\
 t \\
 \end{pmatrix}

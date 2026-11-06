@@ -71,8 +71,7 @@ $$
 x \\
 y \\
 \end{pmatrix}
-=
-\begin{pmatrix}
+=\begin{pmatrix}
 6 \\
 4 \\
 \end{pmatrix}

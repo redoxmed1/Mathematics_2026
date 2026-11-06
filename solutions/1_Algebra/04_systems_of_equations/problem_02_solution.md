@@ -116,8 +116,7 @@ x \\
 y \\
 z \\
 \end{pmatrix}
-=
-\begin{pmatrix}
+=\begin{pmatrix}
 1 \\
 2 \\
 3 \\

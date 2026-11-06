@@ -92,8 +92,7 @@ x \\
 y \\
 z \\
 \end{pmatrix}
-=
-\begin{pmatrix}
+=\begin{pmatrix}
 -t \\
 t \\
 t \\

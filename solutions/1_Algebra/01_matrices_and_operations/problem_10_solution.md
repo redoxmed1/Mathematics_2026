@@ -1,75 +1,74 @@
-### Exercise 5 – Matrix Times Vector
+### Exercise 10. Inverse of a 2x2 Matrix
 
 **Problem**
 
-Let
+Given
 
 $$
 A=\begin{pmatrix}
-2 & -1 \\
-1 & 3
-\end{pmatrix},\qquad
-x=\begin{pmatrix}
-4 \\
-2
-\end{pmatrix}.
+3 & 1 \\
+5 & 2
+\end{pmatrix},
 $$
 
-Compute $Ax$. Then express $Ax$ as a linear combination of the columns of $A$, with coefficients coming from the vector $x$.
+find the inverse matrix $A^{-1}$ using the standard 2x2 inverse formula, and verify that $AA^{-1} = I$.
 
 **Solution**
 
-**1. Multiply the matrix by the vector**
+**1. Compute the determinant**
 
-Multiply each row of $A$ by the column vector $x$:
+The determinant of $A$ is:
 
 $$
-Ax=\begin{pmatrix}
-2(4)+(-1)(2) \\
-1(4)+3(2)
+\det(A) = 3(2) - 1(5) = 6 - 5 = 1.
+$$
+
+**2. Apply the inverse formula**
+
+For a $2 \times 2$ matrix $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$, the inverse is given by:
+
+$$
+A^{-1} = \frac{1}{\det(A)} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}.
+$$
+
+Substituting our values:
+
+$$
+A^{-1} = \frac{1}{1} \begin{pmatrix}
+2 & -1 \\
+-5 & 3
 \end{pmatrix}
-=\begin{pmatrix}
-6 \\
-10
+=
+\begin{pmatrix}
+2 & -1 \\
+-5 & 3
 \end{pmatrix}.
 $$
 
-**2. Express the result using the columns**
+**3. Verify the result**
 
-Let the first and second columns of $A$ be
+Multiply $A$ by $A^{-1}$ to confirm the product is the identity matrix $I$:
 
 $$
-a_1=\begin{pmatrix}
-2 \\
-1
-\end{pmatrix},\qquad
-a_2=\begin{pmatrix}
--1 \\
-3
+AA^{-1} = 
+\begin{pmatrix}
+3 & 1 \\
+5 & 2
+\end{pmatrix}
+\begin{pmatrix}
+2 & -1 \\
+-5 & 3
+\end{pmatrix}
+=
+\begin{pmatrix}
+3(2) + 1(-5) & 3(-1) + 1(3) \\
+5(2) + 2(-5) & 5(-1) + 2(3)
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
 \end{pmatrix}.
 $$
 
-The entries of $x$ are $4$ and $2$, so the matrix-vector product is the linear combination $4a_1+2a_2$:
-
-$$
-Ax=4\begin{pmatrix}
-2 \\
-1
-\end{pmatrix}+2\begin{pmatrix}
--1 \\
-3
-\end{pmatrix}
-=\begin{pmatrix}
-8 \\
-4
-\end{pmatrix}+\begin{pmatrix}
--2 \\
-6
-\end{pmatrix}
-=\begin{pmatrix}
-6 \\
-10
-\end{pmatrix}.
-$$
-
-This agrees with the direct multiplication, verifying the result.
+The result is verified.

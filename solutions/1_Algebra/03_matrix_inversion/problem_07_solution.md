@@ -1,146 +1,242 @@
 
-### Exercise 7. Inverse of a Product
+# Exercise 7 – Inverse of a Product
+
+## Problem
+
+Given the following matrices:
+
+$$
+A =
+\begin{pmatrix}
+1 & 1 \\
+0 & 1
+\end{pmatrix}
+$$
+
+$$
+B =
+\begin{pmatrix}
+2 & 0 \\
+0 & 3
+\end{pmatrix}
+$$
+
+Calculate the inverse of AB and calculate the product of B inverse and A inverse. Check that both results are equal and explain why the inverse of a product reverses the order of the factors.
+
+---
+
+## Solution
+
+### Step 1: Calculate AB
+
+First, multiply matrix A by matrix B:
+
+$$
+AB =
+\begin{pmatrix}
+1 & 1 \\
+0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+2 & 0 \\
+0 & 3
+\end{pmatrix}
+$$
+
+Calculate each entry:
+
+$$
+AB =
+\begin{pmatrix}
+1(2)+1(0) & 1(0)+1(3) \\
+0(2)+1(0) & 0(0)+1(3)
+\end{pmatrix}
+$$
+
+Simplify:
+
+$$
+AB =
+\begin{pmatrix}
+2 & 3 \\
+0 & 3
+\end{pmatrix}
+$$
+
+### Step 2: Calculate the inverse of AB
+
+First, calculate the determinant:
+
+$$
+\det(AB) = 2(3)-3(0) = 6
+$$
+
+Since the determinant is not zero, the inverse exists.
+
+For a 2×2 matrix, the inverse formula is:
+
+$$
+M^{-1} =
+\frac{1}{ad-bc}
+\begin{pmatrix}
+d & -b \\
+-c & a
+\end{pmatrix}
+$$
+
+Apply the formula to matrix AB:
+
+$$
+(AB)^{-1} =
+\frac{1}{6}
+\begin{pmatrix}
+3 & -3 \\
+0 & 2
+\end{pmatrix}
+$$
+
+Simplify:
+
+$$
+(AB)^{-1} =
+\begin{pmatrix}
+\frac{1}{2} & -\frac{1}{2} \\
+0 & \frac{1}{3}
+\end{pmatrix}
+$$
+
+### Step 3: Calculate A inverse and B inverse separately
+
+First, calculate the determinant of A:
+
+$$
+\det(A) = 1(1)-1(0) = 1
+$$
+
+Therefore, the inverse of A is:
 
-**Problem**
+$$
+A^{-1} =
+\begin{pmatrix}
+1 & -1 \\
+0 & 1
+\end{pmatrix}
+$$
 
-Given the matrices A and B:
+Now, calculate the determinant of B:
 
-Matrix A:
+$$
+\det(B) = 2(3)-0(0) = 6
+$$
 
-    | 1  1 |
-    | 0  1 |
+Therefore, the inverse of B is:
 
-Matrix B:
+$$
+B^{-1} =
+\begin{pmatrix}
+\frac{1}{2} & 0 \\
+0 & \frac{1}{3}
+\end{pmatrix}
+$$
 
-    | 2  0 |
-    | 0  3 |
+### Step 4: Calculate B inverse multiplied by A inverse
 
-Calculate the inverse of AB and calculate B inverse multiplied by A inverse. Check that both results are equal and explain why the inverse of a product reverses the order of the factors.
+The inverse of a product reverses the order of the matrices.
 
-**Solution**
+Calculate:
 
-**1. Calculate AB**
+$$
+B^{-1}A^{-1} =
+\begin{pmatrix}
+\frac{1}{2} & 0 \\
+0 & \frac{1}{3}
+\end{pmatrix}
+\begin{pmatrix}
+1 & -1 \\
+0 & 1
+\end{pmatrix}
+$$
 
-Multiply the rows of A by the columns of B.
+Multiply the rows by the columns:
 
-    AB =
+$$
+B^{-1}A^{-1} =
+\begin{pmatrix}
+\frac{1}{2}(1)+0(0) & \frac{1}{2}(-1)+0(1) \\
+0(1)+\frac{1}{3}(0) & 0(-1)+\frac{1}{3}(1)
+\end{pmatrix}
+$$
 
-    | 1(2) + 1(0)    1(0) + 1(3) |
-    | 0(2) + 1(0)    0(0) + 1(3) |
+Simplify:
 
-Simplifying:
+$$
+B^{-1}A^{-1} =
+\begin{pmatrix}
+\frac{1}{2} & -\frac{1}{2} \\
+0 & \frac{1}{3}
+\end{pmatrix}
+$$
 
-    AB =
+### Step 5: Compare both results
 
-    | 2  3 |
-    | 0  3 |
+From Step 2:
 
-**2. Calculate the inverse of AB**
+$$
+(AB)^{-1} =
+\begin{pmatrix}
+\frac{1}{2} & -\frac{1}{2} \\
+0 & \frac{1}{3}
+\end{pmatrix}
+$$
 
-First calculate the determinant:
+From Step 4:
 
-    det AB = 2 × 3 - 3 × 0
-           = 6
+$$
+B^{-1}A^{-1} =
+\begin{pmatrix}
+\frac{1}{2} & -\frac{1}{2} \\
+0 & \frac{1}{3}
+\end{pmatrix}
+$$
 
-Since the determinant is nonzero, the inverse exists.
+Both results are equal. Therefore:
 
-For a 2 × 2 matrix, the inverse formula is:
+$$
+(AB)^{-1} = B^{-1}A^{-1}
+$$
 
-    | a  b | inverse = 1/(ad - bc) × |  d  -b |
-    | c  d |                         | -c   a |
+---
 
-Applying the formula:
+## Explanation
 
-    AB inverse = 1/6 ×
+When multiplying ABx, matrix B acts on vector x first, and then matrix A acts on the result.
 
-    | 3  -3 |
-    | 0   2 |
+To reverse these operations, we must undo them in the opposite order.
 
-Therefore:
+First, we apply A inverse, and then B inverse.
 
-    AB inverse =
+This can be shown mathematically:
 
-    |  1/2  -1/2 |
-    |   0    1/3 |
+$$
+A^{-1}(ABx) = Bx
+$$
 
-**3. Calculate A inverse and B inverse separately**
+Then:
 
-For matrix A:
+$$
+B^{-1}A^{-1}(ABx) = x
+$$
 
-    det A = 1 × 1 - 1 × 0
-          = 1
+Therefore, the inverse of a product reverses the order of the original matrices.
 
-Therefore:
+---
 
-    A inverse =
+## Conclusion
 
-    | 1  -1 |
-    | 0   1 |
+The calculations confirm that both methods give the same result:
 
-For matrix B:
+$$
+(AB)^{-1} = B^{-1}A^{-1}
+$$
 
-    det B = 2 × 3 - 0 × 0
-          = 6
-
-Therefore:
-
-    B inverse =
-
-    | 1/2   0   |
-    |  0   1/3  |
-
-**4. Calculate B inverse multiplied by A inverse**
-
-The inverse of a product requires reversing the order.
-
-    B inverse × A inverse =
-
-    | 1/2   0   |   | 1  -1 |
-    |  0   1/3  | × | 0   1 |
-
-Multiply rows by columns:
-
-    | (1/2 × 1) + (0 × 0)     (1/2 × -1) + (0 × 1) |
-    | (0 × 1) + (1/3 × 0)     (0 × -1) + (1/3 × 1) |
-
-Simplifying:
-
-    B inverse × A inverse =
-
-    |  1/2  -1/2 |
-    |   0    1/3 |
-
-Both methods give exactly the same result.
-
-    Inverse of AB =
-
-    |  1/2  -1/2 |
-    |   0    1/3 |
-
-**5. Explain why the order is reversed**
-
-When calculating ABx, matrix B acts on vector x first, and then matrix A acts on the result.
-
-To undo these operations, we must reverse their order.
-
-First, we undo A using A inverse.
-
-Then, we undo B using B inverse.
-
-The calculation is:
-
-    A inverse × ABx = Bx
-
-    B inverse × A inverse × ABx = x
-
-Therefore:
-
-    Inverse of AB = B inverse × A inverse
-
-**Conclusion**
-
-The inverse of a product reverses the order of the original matrices because the last transformation applied must be the first one undone.
-
-The calculations confirm that both methods produce the same inverse matrix.
-
-
+The inverse of a product reverses the order of the factors because the last operation performed must be the first operation undone.

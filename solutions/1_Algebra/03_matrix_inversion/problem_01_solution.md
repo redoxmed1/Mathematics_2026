@@ -1,63 +1,150 @@
-### Exercise 1. Definition of the Inverse
 
-**Problem**
+# Exercise 1 – Definition of the Inverse
 
-For
+## Problem
+
+Given the following two matrices:
 
 $$
-A=\begin{pmatrix}
-2 & 1\\
+A =
+\begin{pmatrix}
+2 & 1 \\
 1 & 1
-\end{pmatrix},
-\qquad
-B=\begin{pmatrix}
-1 & -1\\
+\end{pmatrix}
+$$
+
+$$
+B =
+\begin{pmatrix}
+1 & -1 \\
 -1 & 2
-\end{pmatrix},
+\end{pmatrix}
 $$
 
-check, without using a formula, whether B = A⁻¹. Compute AB and BA and relate the result to the definition of the inverse.
+Check, without using an inverse formula, whether B is the inverse of A. Calculate both products AB and BA and relate the results to the definition of the inverse matrix.
 
-**Solution**
+---
 
-A matrix B is the inverse of A if multiplying in either order gives the identity matrix I.
+## Solution
 
-First calculate AB:
+A matrix B is the inverse of matrix A if multiplying them in either order gives the identity matrix I.
+
+The definition is:
 
 $$
-AB=\begin{pmatrix}
-2(1)+1(-1) & 2(-1)+1(2)\\
+AB = BA = I
+$$
+
+### Step 1: Calculate AB
+
+Multiply matrix A by matrix B:
+
+$$
+AB =
+\begin{pmatrix}
+2 & 1 \\
+1 & 1
+\end{pmatrix}
+\begin{pmatrix}
+1 & -1 \\
+-1 & 2
+\end{pmatrix}
+$$
+
+Calculate each entry:
+
+$$
+AB =
+\begin{pmatrix}
+2(1)+1(-1) & 2(-1)+1(2) \\
 1(1)+1(-1) & 1(-1)+1(2)
 \end{pmatrix}
-=
-\begin{pmatrix}
-1 & 0\\
-0 & 1
-\end{pmatrix}=I.
 $$
 
-Now calculate BA:
+Simplify:
 
 $$
-BA=
+AB =
 \begin{pmatrix}
-1(2)+(-1)(1) & 1(1)+(-1)(1) \\
-(-1)(2)+2(1) & (-1)(1)+2(1)
+2-1 & -2+2 \\
+1-1 & -1+2
 \end{pmatrix}
-=
+$$
+
+Therefore:
+
+$$
+AB =
 \begin{pmatrix}
 1 & 0 \\
 0 & 1
 \end{pmatrix}
-=I.
+= I
 $$
 
-Both products equal the identity matrix. Therefore, B is the inverse of A:
+### Step 2: Calculate BA
+
+Now multiply matrix B by matrix A:
 
 $$
-B=A^{-1}.
+BA =
+\begin{pmatrix}
+1 & -1 \\
+-1 & 2
+\end{pmatrix}
+\begin{pmatrix}
+2 & 1 \\
+1 & 1
+\end{pmatrix}
 $$
 
-This verifies the definition directly, without using the 2 × 2 inverse formula.
+Calculate each entry:
+
+$$
+BA =
+\begin{pmatrix}
+1(2)+(-1)(1) & 1(1)+(-1)(1) \\
+(-1)(2)+2(1) & (-1)(1)+2(1)
+\end{pmatrix}
+$$
+
+Simplify:
+
+$$
+BA =
+\begin{pmatrix}
+2-1 & 1-1 \\
+-2+2 & -1+2
+\end{pmatrix}
+$$
+
+Therefore:
+
+$$
+BA =
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}
+= I
+$$
 
 ---
+
+## Conclusion
+
+Both products give the identity matrix:
+
+$$
+AB = BA = I
+$$
+
+According to the definition of the inverse matrix, B is the inverse of A.
+
+Therefore:
+
+$$
+B = A^{-1}
+$$
+
+This confirms that B is the inverse of A without using the 2×2 inverse formula.

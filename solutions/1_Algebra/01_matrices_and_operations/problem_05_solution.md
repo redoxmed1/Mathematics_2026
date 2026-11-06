@@ -8,6 +8,8 @@ $$
 A = \begin{pmatrix} 2 & -1 \\ 1 & 3 \end{pmatrix}
 $$
 
+and
+
 $$
 x = \begin{pmatrix} 4 \\ 2 \end{pmatrix}
 $$
@@ -45,11 +47,7 @@ $$
 Let the first and second columns of $A$ be denoted as $a_1$ and $a_2$:
 
 $$
-a_1 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}
-$$
-
-$$
-a_2 = \begin{pmatrix} -1 \\ 3 \end{pmatrix}
+a_1 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}, \quad a_2 = \begin{pmatrix} -1 \\ 3 \end{pmatrix}
 $$
 
 The entries of $x$ are $4$ and $2$, so the matrix-vector product can be written as the linear combination $4a_1 + 2a_2$:
@@ -74,13 +72,13 @@ $$
 
 ## Conclusion
 
-The direct matrix-vector product is:
+- The direct matrix-vector product is:
 
 $$
 Ax = \begin{pmatrix} 6 \\ 10 \end{pmatrix}
 $$
 
-Expressed as a linear combination of the columns of $A$ using the components of $x$:
+- Expressed as a linear combination of the columns of $A$ using the components of $x$:
 
 $$
 4 \begin{pmatrix} 2 \\ 1 \end{pmatrix} + 2 \begin{pmatrix} -1 \\ 3 \end{pmatrix} = \begin{pmatrix} 6 \\ 10 \end{pmatrix}

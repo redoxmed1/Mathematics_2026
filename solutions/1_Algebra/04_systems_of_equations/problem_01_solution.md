@@ -8,11 +8,17 @@ $$
 \begin{cases}
 2x-y+z=4, \\
 x+3y-2z=1, \\
-3x+y+z=7.
+3x+y+z=7
 \end{cases}
 $$
 
-in the form $Ax=b$. Identify the coefficient matrix, the vector of unknowns, and the right-hand side vector. Explain how each row corresponds to one equation.
+in the form
+
+$$
+Ax=b
+$$
+
+Identify the coefficient matrix, the vector of unknowns, and the right-hand side vector. Explain how each row corresponds to one equation.
 
 **Solution**
 
@@ -23,7 +29,7 @@ A=
 \begin{pmatrix}
 2 & -1 & 1 \\
 1 & 3 & -2 \\
-3 & 1 & 1 \\
+3 & 1 & 1
 \end{pmatrix}
 $$
 
@@ -34,7 +40,7 @@ X=
 \begin{pmatrix}
 x \\
 y \\
-z \\
+z
 \end{pmatrix}
 $$
 
@@ -45,11 +51,11 @@ b=
 \begin{pmatrix}
 4 \\
 1 \\
-7 \\
+7
 \end{pmatrix}
 $$
 
-Therefore,
+Therefore, the system can be written as
 
 $$
 AX=b
@@ -61,19 +67,25 @@ $$
 \begin{pmatrix}
 2 & -1 & 1 \\
 1 & 3 & -2 \\
-3 & 1 & 1 \\
+3 & 1 & 1
 \end{pmatrix}
 \begin{pmatrix}
 x \\
 y \\
-z \\
+z
 \end{pmatrix}
 =
 \begin{pmatrix}
 4 \\
 1 \\
-7 \\
+7
 \end{pmatrix}
 $$
 
-Each row contains the coefficients of one equation. The first row represents the first equation, the second row represents the second equation, and the third row represents the third equation.
+Each row of the coefficient matrix contains the coefficients of one equation.
+
+- The first row represents the first equation.
+- The second row represents the second equation.
+- The third row represents the third equation.
+
+Therefore, the matrix representation contains exactly the same information as the original system.

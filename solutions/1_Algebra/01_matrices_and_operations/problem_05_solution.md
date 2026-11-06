@@ -1,8 +1,8 @@
-# Ćwiczenie 5 – Iloczyn macierzy przez wektor
+# Exercise 5 – Matrix Times Vector
 
 ## Problem
 
-Niech
+Let
 
 $$
 A =
@@ -20,15 +20,15 @@ x =
 \end{pmatrix}
 $$
 
-Oblicz $Ax$. Następnie wyraź $Ax$ jako kombinację liniową kolumn macierzy $A$, gdzie współczynnikami są składowe wektora $x$.
+Compute $Ax$. Then express $Ax$ as a linear combination of the columns of $A$, with coefficients coming from the vector $x$.
 
 ---
 
-## Rozwiązanie
+## Solution
 
-### Krok 1: Mnożenie macierzy przez wektor
+### Step 1: Multiply the matrix by the vector
 
-Pomnóż każdy wiersz macierzy $A$ przez wektor kolumnowy $x$:
+Multiply each row of $A$ by the column vector $x$:
 
 $$
 Ax =
@@ -42,7 +42,7 @@ Ax =
 \end{pmatrix}
 $$
 
-Oblicz poszczególne elementy:
+Compute the entries:
 
 $$
 Ax =
@@ -52,7 +52,7 @@ Ax =
 \end{pmatrix}
 $$
 
-Uprość arytmetykę:
+Simplify the arithmetic:
 
 $$
 Ax =
@@ -64,9 +64,9 @@ $$
 
 ---
 
-### Krok 2: Wyrażenie wyniku za pomocą kolumn
+### Step 2: Express the result using the columns
 
-Niech pierwsza i druga kolumna macierzy $A$ będą oznaczone jako $a_1$ i $a_2$:
+Let the first and second columns of $A$ be denoted as $a_1$ and $a_2$:
 
 $$
 a_1 =
@@ -84,7 +84,7 @@ a_2 =
 \end{pmatrix}
 $$
 
-Współrzędne wektora $x$ to $4$ i $2$, więc iloczyn macierzy i wektora można zapisać jako kombinację liniową $4a_1 + 2a_2$:
+The entries of $x$ are $4$ and $2$, so the matrix-vector product can be written as the linear combination $4a_1 + 2a_2$:
 
 $$
 Ax = 4
@@ -99,7 +99,7 @@ Ax = 4
 \end{pmatrix}
 $$
 
-Wykonaj mnożenie przez skalar:
+Perform the scalar multiplications:
 
 $$
 Ax =
@@ -114,7 +114,7 @@ Ax =
 \end{pmatrix}
 $$
 
-Dodaj wektory współrzędna po współrzędnej:
+Add the vectors entry by entry:
 
 $$
 Ax =
@@ -126,9 +126,9 @@ $$
 
 ---
 
-## Wnioski
+## Conclusion
 
-- Bezpośredni iloczyn macierzy i wektora wynosi:
+- The direct matrix-vector product is:
 
 $$
 Ax =
@@ -138,7 +138,7 @@ Ax =
 \end{pmatrix}
 $$
 
-- Przedstawiony jako kombinacja liniowa kolumn macierzy $A$ przy użyciu składowych wektora $x$:
+- Expressed as a linear combination of the columns of $A$ using the components of $x$:
 
 $$
 4
@@ -158,4 +158,4 @@ $$
 \end{pmatrix}
 $$
 
-Potwierdza to, że pomnożenie macierzy przez wektor daje kombinację liniową jej kolumn.
+This verifies that multiplying a matrix by a vector yields a linear combination of its columns.

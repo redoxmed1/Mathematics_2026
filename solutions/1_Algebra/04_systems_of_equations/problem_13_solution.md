@@ -84,8 +84,7 @@ x_1 \\
 x_2 \\
 x_3 \\
 \end{pmatrix}
-=
-\begin{pmatrix}
+=\begin{pmatrix}
 10-t \\
 t \\
 8-t \\

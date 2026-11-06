@@ -44,7 +44,7 @@ A^{-1} = \begin{pmatrix} \frac{3}{5} & -\frac{1}{5} \\ -\frac{1}{5} & \frac{2}{5
 $$
 
 #### Step 3: Compute x = A⁻¹b
-Multiply $A^{-1}$ by vector $b$:
+Multiply $A^{-1}$ by vertical column vector $b$:
 
 $$
 x = \begin{pmatrix} \frac{3}{5} & -\frac{1}{5} \\ -\frac{1}{5} & \frac{2}{5} \end{pmatrix} \begin{pmatrix} 7 \\ 8 \end{pmatrix}
@@ -57,7 +57,11 @@ x = \begin{pmatrix} \left(\frac{3}{5}\right)(7) + \left(-\frac{1}{5}\right)(8) \
 $$
 
 $$
-x = \begin{pmatrix} \frac{21 - 8}{5} \\ \frac{-7 + 16}{5} \end{pmatrix} = \begin{pmatrix} \frac{13}{5} \\ \frac{9}{5} \end{pmatrix}
+x = \begin{pmatrix} \frac{21 - 8}{5} \\ \frac{-7 + 16}{5} \end{pmatrix}
+$$
+
+$$
+x = \begin{pmatrix} \frac{13}{5} \\ \frac{9}{5} \end{pmatrix}
 $$
 
 #### Operation count for Method 1
@@ -131,7 +135,7 @@ $$
 \right)
 $$
 
-Thus, the solution vector is:
+Thus, the vertical solution vector is:
 
 $$
 x = \begin{pmatrix} \frac{13}{5} \\ \frac{9}{5} \end{pmatrix}
@@ -156,19 +160,32 @@ $$
 | **Inverse Matrix Method ($x = A^{-1}b$)** | 13 |
 | **Gaussian Elimination** | 15 |
 
-- Both methods yield the exact same solution: $x = \begin{pmatrix} \frac{13}{5} \\ \frac{9}{5} \end{pmatrix}$.
+- Both methods yield the exact same vertical solution vector: 
+
+$$
+x = \begin{pmatrix} \frac{13}{5} \\ \frac{9}{5} \end{pmatrix}
+$$
+
 - In this specific $2 \times 2$ example, the inverse method requires 2 fewer operations ($15 - 13 = 2$).
 - However, Gaussian elimination is generally far more efficient and numerically stable for larger systems ($n > 3$) because it avoids computing the explicit inverse matrix.
 
 ### Final Verification
 
-Substitute the solution back into $Ax$:
+Substitute the solution vector back into $Ax$:
 
 $$
-Ax = \begin{pmatrix} 2 & 1 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} \frac{13}{5} \\ \frac{9}{5} \end{pmatrix} = \begin{pmatrix} \frac{26}{5} + \frac{9}{5} \\ \frac{13}{5} + \frac{27}{5} \end{pmatrix} = \begin{pmatrix} \frac{35}{5} \\ \frac{40}{5} \end{pmatrix} = \begin{pmatrix} 7 \\ 8 \end{pmatrix} = b
+Ax = \begin{pmatrix} 2 & 1 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} \frac{13}{5} \\ \frac{9}{5} \end{pmatrix}
 $$
 
-The calculation matches vector $b$, confirming that the solution is correct.
+$$
+Ax = \begin{pmatrix} \frac{26}{5} + \frac{9}{5} \\ \frac{13}{5} + \frac{27}{5} \end{pmatrix}
+$$
+
+$$
+Ax = \begin{pmatrix} \frac{35}{5} \\ \frac{40}{5} \end{pmatrix} = \begin{pmatrix} 7 \\ 8 \end{pmatrix} = b
+$$
+
+The calculation matches column vector $b$, confirming that the solution is correct.
 
 ---
 

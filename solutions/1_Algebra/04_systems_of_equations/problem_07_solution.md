@@ -62,8 +62,7 @@ $$
 x \\
 y \\
 \end{pmatrix}
-=
-\begin{pmatrix}
+=\begin{pmatrix}
 \frac{5}{2} \\
 2 \\
 \end{pmatrix}

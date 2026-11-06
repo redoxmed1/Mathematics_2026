@@ -1,318 +1,179 @@
+# Exercise 15 – Two Methods for Solving the Same System
 
-### Exercise 15. Two Methods for Solving the Same System
-
-**Problem**
+## Problem
 
 Given
 
 $$
-A=
-\begin{pmatrix}
-2 & 1\\
-1 & 3
-\end{pmatrix},
+A = \begin{pmatrix} 2 & 1 \\ 1 & 3 \end{pmatrix},
 \qquad
-b=
-\begin{pmatrix}
-7\\
-8
-\end{pmatrix},
+b = \begin{pmatrix} 7 \\ 8 \end{pmatrix}
 $$
 
-solve $Ax=b$ in two ways:
+solve $Ax = b$ in two ways:
 
-1. Using $x=A^{-1}b$.
+1. Using $x = A^{-1}b$.
 2. Using Gaussian elimination.
 
 Compare both solutions, count the essential arithmetic operations, and identify which method is simpler in this example.
 
-**Solution**
+---
 
-**Method 1. Using the inverse matrix**
+## Solution
 
-First calculate the determinant:
+### Method 1: Using the inverse matrix
 
-$$
-\det(A)=2(3)-1(1)
-$$
-
-$$
-\det(A)=6-1=5
-$$
-
-Since the determinant is nonzero, $A$ is invertible.
-
-Calculate the inverse:
+#### Step 1: Calculate the determinant of A
+Apply the $2 \times 2$ determinant formula:
 
 $$
-A^{-1}
-=
-\frac15
-\begin{pmatrix}
-3 & -1\\
--1 & 2
-\end{pmatrix}
+\det(A) = (2)(3) - (1)(1) = 6 - 1 = 5
+$$
+
+Since the determinant is nonzero ($\det(A) \neq 0$), matrix $A$ is invertible.
+
+#### Step 2: Calculate the inverse of A
+Apply the $2 \times 2$ inverse formula:
+
+$$
+A^{-1} = \frac{1}{5} \begin{pmatrix} 3 & -1 \\ -1 & 2 \end{pmatrix}
 $$
 
 $$
-A^{-1}
-=
-\begin{pmatrix}
-\frac35 & -\frac15\\
--\frac15 & \frac25
-\end{pmatrix}
+A^{-1} = \begin{pmatrix} \frac{3}{5} & -\frac{1}{5} \\ -\frac{1}{5} & \frac{2}{5} \end{pmatrix}
 $$
 
-Now calculate $x=A^{-1}b$:
+#### Step 3: Compute x = A⁻¹b
+Multiply $A^{-1}$ by vector $b$:
 
 $$
-x=
-\begin{pmatrix}
-\frac35 & -\frac15\\
--\frac15 & \frac25
-\end{pmatrix}
-\begin{pmatrix}
-7\\
-8
-\end{pmatrix}
+x = \begin{pmatrix} \frac{3}{5} & -\frac{1}{5} \\ -\frac{1}{5} & \frac{2}{5} \end{pmatrix} \begin{pmatrix} 7 \\ 8 \end{pmatrix}
+$$
+
+Calculate each entry:
+
+$$
+x = \begin{pmatrix} \left(\frac{3}{5}\right)(7) + \left(-\frac{1}{5}\right)(8) \\ \left(-\frac{1}{5}\right)(7) + \left(\frac{2}{5}\right)(8) \end{pmatrix}
 $$
 
 $$
-x=
-\begin{pmatrix}
-\frac35(7)-\frac15(8)\\
--\frac15(7)+\frac25(8)
-\end{pmatrix}
+x = \begin{pmatrix} \frac{21 - 8}{5} \\ \frac{-7 + 16}{5} \end{pmatrix} = \begin{pmatrix} \frac{13}{5} \\ \frac{9}{5} \end{pmatrix}
 $$
 
-$$
-x=
-\begin{pmatrix}
-\frac{21-8}{5}\\
-\frac{-7+16}{5}
-\end{pmatrix}
-$$
+#### Operation count for Method 1
+1. **Determinant:** 2 multiplications and 1 subtraction = 3 operations.
+2. **Inverse entries:** 4 scalar divisions by 5 = 4 operations.
+3. **Matrix-vector product:** 4 multiplications and 2 additions = 6 operations.
 
-Therefore:
+**Total operations for Method 1:** $3 + 4 + 6 = 13$ operations.
 
-$$
-\boxed{
-x=
-\begin{pmatrix}
-\frac{13}{5}\\
-\frac95
-\end{pmatrix}
-}
-$$
+---
 
-**Arithmetic operation count for Method 1**
+### Method 2: Using Gaussian elimination
 
-1. Determinant: 2 multiplications and 1 subtraction = 3 operations.
-2. Calculate the inverse entries: 4 divisions by 5 = 4 operations.
-3. Matrix-vector multiplication: 4 multiplications and 2 additions = 6 operations.
-
-Total:
-
-$$
-3+4+6=13
-$$
-
-Therefore, the inverse method requires 13 arithmetic operations using this counting convention.
-
-**Method 2. Using Gaussian elimination**
-
-Start with the augmented matrix:
+#### Step 1: Set up the augmented matrix
+Write the augmented matrix $\left(A \mid b\right)$:
 
 $$
 \left(
 \begin{array}{cc|c}
-2 & 1 & 7\\
+2 & 1 & 7 \\
 1 & 3 & 8
 \end{array}
 \right)
 $$
 
-**Step 1. Swap the rows**
-
-$$
-R_1\leftrightarrow R_2
-$$
-
-The matrix becomes:
+#### Step 2: Swap the rows for a clean pivot
+Apply row swap $R_1 \leftrightarrow R_2$:
 
 $$
 \left(
 \begin{array}{cc|c}
-1 & 3 & 8\\
+1 & 3 & 8 \\
 2 & 1 & 7
 \end{array}
 \right)
 $$
 
-**Step 2. Eliminate the first entry in row 2**
-
-Apply the row operation:
-
-$$
-R_2\rightarrow R_2-2R_1
-$$
-
-Calculate the new second row:
-
-$$
-(2-2(1),\ 1-2(3)\ |\ 7-2(8))
-$$
-
-$$
-=(0,-5\mid -9)
-$$
-
-The matrix becomes:
+#### Step 3: Eliminate the first entry in row 2
+Apply operation $R_2 \to R_2 - 2R_1$:
 
 $$
 \left(
 \begin{array}{cc|c}
-1 & 3 & 8\\
+1 & 3 & 8 \\
 0 & -5 & -9
 \end{array}
 \right)
 $$
 
-**Step 3. Make the second pivot equal to 1**
-
-Apply:
-
-$$
-R_2\rightarrow -\frac15R_2
-$$
-
-The matrix becomes:
+#### Step 4: Normalize the second row pivot
+Apply operation $R_2 \to -\frac{1}{5}R_2$:
 
 $$
 \left(
 \begin{array}{cc|c}
-1 & 3 & 8\\
-0 & 1 & \frac95
+1 & 3 & 8 \\
+0 & 1 & \frac{9}{5}
 \end{array}
 \right)
 $$
 
-**Step 4. Eliminate the second entry in row 1**
-
-Apply:
-
-$$
-R_1\rightarrow R_1-3R_2
-$$
-
-The matrix becomes:
+#### Step 5: Eliminate the upper entry in column 2
+Apply operation $R_1 \to R_1 - 3R_2$:
 
 $$
 \left(
 \begin{array}{cc|c}
-1 & 0 & \frac{13}{5}\\
-0 & 1 & \frac95
+1 & 0 & \frac{13}{5} \\
+0 & 1 & \frac{9}{5}
 \end{array}
 \right)
 $$
 
-Therefore:
+Thus, the solution vector is:
 
 $$
-\boxed{
-x=
-\begin{pmatrix}
-\frac{13}{5}\\
-\frac95
-\end{pmatrix}
-}
+x = \begin{pmatrix} \frac{13}{5} \\ \frac{9}{5} \end{pmatrix}
 $$
 
-**Arithmetic operation count for Method 2**
+#### Operation count for Method 2
+1. **Row interchange:** 0 arithmetic operations.
+2. **First elimination step:** 3 multiplications and 3 subtractions = 6 operations.
+3. **Row normalization:** 3 scalar multiplications = 3 operations.
+4. **Second elimination step:** 3 multiplications and 3 subtractions = 6 operations.
 
-1. Row interchange: no scalar arithmetic operations.
-2. First elimination: 3 multiplications and 3 subtractions = 6 operations.
-3. Normalize the second row: 3 scalar multiplications = 3 operations.
-4. Second elimination: 3 multiplications and 3 subtractions = 6 operations.
+**Total operations for Method 2:** $6 + 3 + 6 = 15$ operations.
 
-Total:
+---
 
-$$
-6+3+6=15
-$$
+## Comparison and Verification
 
-Therefore, Gaussian elimination requires 15 arithmetic operations using the same counting convention.
+### Comparison of Methods
 
-**Comparison of both methods**
+| Method | Arithmetic Operations |
+| :--- | :---: |
+| **Inverse Matrix Method ($x = A^{-1}b$)** | 13 |
+| **Gaussian Elimination** | 15 |
 
-| Method | Arithmetic operations |
-|---|---:|
-| Inverse matrix method | 13 |
-| Gaussian elimination | 15 |
+- Both methods yield the exact same solution: $x = \begin{pmatrix} \frac{13}{5} \\ \frac{9}{5} \end{pmatrix}$.
+- In this specific $2 \times 2$ example, the inverse method requires 2 fewer operations ($15 - 13 = 2$).
+- However, Gaussian elimination is generally far more efficient and numerically stable for larger systems ($n > 3$) because it avoids computing the explicit inverse matrix.
 
-Both methods produce the same solution:
+### Final Verification
 
-$$
-x=
-\begin{pmatrix}
-\frac{13}{5}\\
-\frac95
-\end{pmatrix}
-$$
-
-The inverse method requires 13 arithmetic operations, while Gaussian elimination requires 15.
-
-The difference is:
+Substitute the solution back into $Ax$:
 
 $$
-15-13=2
+Ax = \begin{pmatrix} 2 & 1 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} \frac{13}{5} \\ \frac{9}{5} \end{pmatrix} = \begin{pmatrix} \frac{26}{5} + \frac{9}{5} \\ \frac{13}{5} + \frac{27}{5} \end{pmatrix} = \begin{pmatrix} \frac{35}{5} \\ \frac{40}{5} \end{pmatrix} = \begin{pmatrix} 7 \\ 8 \end{pmatrix} = b
 $$
 
-Therefore, the inverse method requires 2 fewer arithmetic operations in this particular example.
+The calculation matches vector $b$, confirming that the solution is correct.
 
-However, Gaussian elimination is generally more practical for larger systems because it avoids calculating the complete inverse matrix.
+---
 
-**Final verification**
+## Conclusion
 
-Substitute the solution into the original equation:
-
-$$
-Ax=
-\begin{pmatrix}
-2 & 1\\
-1 & 3
-\end{pmatrix}
-\begin{pmatrix}
-\frac{13}{5}\\
-\frac95
-\end{pmatrix}
-$$
-
-$$
-Ax=
-\begin{pmatrix}
-\frac{26}{5}+\frac95\\
-\frac{13}{5}+\frac{27}{5}
-\end{pmatrix}
-$$
-
-$$
-Ax=
-\begin{pmatrix}
-\frac{35}{5}\\
-\frac{40}{5}
-\end{pmatrix}
-=
-\begin{pmatrix}
-7\\
-8
-\end{pmatrix}
-=b
-$$
-
-The verification confirms that the solution is correct.
-
-**Conclusion**
-
-Both methods solve the system correctly. The inverse method is slightly simpler for this particular example according to the arithmetic operation count. Gaussian elimination is generally preferable for larger systems.
-
+- Both methods solve the linear system successfully.
+- According to the arithmetic operation count, the inverse method is slightly shorter for this particular $2 \times 2$ matrix.
+- For practical applications involving larger matrices, Gaussian elimination remains the preferred choice.

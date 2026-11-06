@@ -57,11 +57,7 @@ $$
 Substitute these values into the determinant formula:
 
 $$
-\begin{aligned}
-\det(A) &= 3(4)-2(5) \\
-        &= 12-10 \\
-        &= 2
-\end{aligned}
+\det(A) = 3(4)-2(5) = 12-10 = 2
 $$
 
 Since the determinant is equal to 2 and is not zero, the inverse matrix exists.
@@ -79,16 +75,14 @@ A^{-1} =
 \end{pmatrix}
 $$
 
-Multiply every element by $\frac{1}{2}$:
+Multiply every element by 1/2:
 
 $$
-\boxed{
 A^{-1} =
 \begin{pmatrix}
 2 & -1 \\
 -\frac{5}{2} & \frac{3}{2}
 \end{pmatrix}
-}
 $$
 
 ---
@@ -112,19 +106,17 @@ $$
 Calculate each entry:
 
 $$
-=
+AA^{-1} =
 \begin{pmatrix}
-3(2)+2(-\frac{5}{2}) &
-3(-1)+2(\frac{3}{2}) \\
-5(2)+4(-\frac{5}{2}) &
-5(-1)+4(\frac{3}{2})
+3(2)+2(-\frac{5}{2}) & 3(-1)+2(\frac{3}{2}) \\
+5(2)+4(-\frac{5}{2}) & 5(-1)+4(\frac{3}{2})
 \end{pmatrix}
 $$
 
 Simplify:
 
 $$
-=
+AA^{-1} =
 \begin{pmatrix}
 6-5 & -3+3 \\
 10-10 & -5+6
@@ -134,28 +126,24 @@ $$
 Therefore:
 
 $$
-\boxed{
 AA^{-1} =
 \begin{pmatrix}
 1 & 0 \\
 0 & 1
 \end{pmatrix}
 = I
-}
 $$
 
-Since the product is the identity matrix $I$, the calculated inverse is correct.
+Since the product is the identity matrix I, the calculated inverse is correct.
 
 ---
 
 ## Final Answer
 
 $$
-\boxed{
 A^{-1} =
 \begin{pmatrix}
 2 & -1 \\
 -\frac{5}{2} & \frac{3}{2}
 \end{pmatrix}
-}
 $$

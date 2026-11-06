@@ -1,76 +1,173 @@
-### Exercise 8. Inverse of a Transformation
 
-**Problem**
+# Exercise 8 – Inverse of a Transformation
 
-The matrix
+## Problem
+
+The following matrix describes a scaling transformation of the plane:
 
 $$
-S=
+S =
 \begin{pmatrix}
 2 & 0 \\
-0 & \frac12
+0 & \frac{1}{2}
 \end{pmatrix}
 $$
 
-describes a scaling of the plane. Find S⁻¹ and explain geometrically what the inverse transformation does. Check the action of the pair S, S⁻¹ on one simple vector.
+Find the inverse matrix S inverse and explain geometrically what the inverse transformation does. Check the action of S and its inverse on one simple vector.
 
-**Solution**
+---
 
-The matrix S doubles the horizontal coordinate and halves the vertical coordinate. To undo this transformation, the inverse must halve the horizontal coordinate and double the vertical coordinate.
+## Solution
 
-Therefore,
+### Step 1: Understand the original transformation
+
+The matrix S performs a nonuniform scaling of the plane.
+
+- The horizontal coordinate (x) is multiplied by 2.
+- The vertical coordinate (y) is multiplied by 1/2.
+
+To undo this transformation, the inverse must:
+
+- Divide the horizontal coordinate by 2.
+- Multiply the vertical coordinate by 2.
+
+### Step 2: Calculate the inverse transformation
+
+The inverse transformation reverses the scaling performed by S.
+
+Therefore, the inverse matrix is:
 
 $$
-S^{-1}=
+S^{-1} =
 \begin{pmatrix}
-\frac12 & 0 \\
+\frac{1}{2} & 0 \\
 0 & 2
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
-**Check using a vector**
+This matrix halves the horizontal coordinate and doubles the vertical coordinate.
 
-Choose
+### Step 3: Choose a vector for verification
+
+Choose the following simple vector:
 
 $$
-v=
+v =
 \begin{pmatrix}
 2 \\
 4
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
-Apply S:
+First, apply the original transformation S:
 
 $$
-Sv=
+Sv =
+\begin{pmatrix}
+2 & 0 \\
+0 & \frac{1}{2}
+\end{pmatrix}
+\begin{pmatrix}
+2 \\
+4
+\end{pmatrix}
+$$
+
+Calculate each entry:
+
+$$
+Sv =
 \begin{pmatrix}
 2(2)+0(4) \\
-0(2)+\frac12(4)
+0(2)+\frac{1}{2}(4)
 \end{pmatrix}
-=
+$$
+
+Simplify:
+
+$$
+Sv =
 \begin{pmatrix}
 4 \\
 2
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
-Now apply S⁻¹ to the result:
+### Step 4: Apply the inverse transformation
+
+Now apply S inverse to the resulting vector:
 
 $$
-S^{-1}(Sv)=
+S^{-1}(Sv) =
 \begin{pmatrix}
-\frac12(4)+0(2) \\
+\frac{1}{2} & 0 \\
+0 & 2
+\end{pmatrix}
+\begin{pmatrix}
+4 \\
+2
+\end{pmatrix}
+$$
+
+Calculate each entry:
+
+$$
+S^{-1}(Sv) =
+\begin{pmatrix}
+\frac{1}{2}(4)+0(2) \\
 0(4)+2(2)
 \end{pmatrix}
-=
+$$
+
+Simplify:
+
+$$
+S^{-1}(Sv) =
 \begin{pmatrix}
 2 \\
 4
 \end{pmatrix}
-=v.
 $$
 
-The original vector is recovered. Geometrically, S⁻¹ undoes the nonuniform scaling performed by S.
+Therefore:
+
+$$
+S^{-1}(Sv) = v
+$$
+
+The original vector is recovered, which confirms that the inverse transformation works correctly.
 
 ---
+
+## Geometrical Explanation
+
+The original transformation S stretches the plane horizontally by a factor of 2 and compresses it vertically by a factor of 1/2.
+
+The inverse transformation S inverse does exactly the opposite:
+
+- It compresses the plane horizontally by a factor of 1/2.
+- It stretches the plane vertically by a factor of 2.
+
+Applying both transformations in sequence returns every vector to its original position.
+
+---
+
+## Conclusion
+
+The inverse matrix is:
+
+$$
+S^{-1} =
+\begin{pmatrix}
+\frac{1}{2} & 0 \\
+0 & 2
+\end{pmatrix}
+$$
+
+The verification confirms that:
+
+$$
+S^{-1}(Sv) = v
+$$
+
+Therefore, the inverse transformation successfully reverses the original scaling.

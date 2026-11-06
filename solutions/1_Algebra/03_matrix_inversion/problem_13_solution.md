@@ -33,9 +33,8 @@ Compare the results. Additionally, compute $H^{-1}S^{-1}$ and verify that using 
 Multiply matrix $H$ by matrix $S$:
 
 $$
-T = HS =
-\begin{pmatrix}
-1 & 1 \\
+T = HS =\begin{pmatrix}
+1 & 1\\
 0 & 1
 \end{pmatrix}
 \begin{pmatrix}

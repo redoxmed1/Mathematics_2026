@@ -5,15 +5,13 @@
 The matrices
 
 $$
-S =
-\begin{pmatrix}
-2 & 0 \\
+S =\begin{pmatrix}
+2 & 0\\
 0 & 1
 \end{pmatrix},
 \qquad
-H =
-\begin{pmatrix}
-1 & 1 \\
+H =\begin{pmatrix}
+1 & 1\\
 0 & 1
 \end{pmatrix}
 $$

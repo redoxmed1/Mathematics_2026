@@ -1,81 +1,91 @@
-### Exercise 11. When Do Matrices Commute?
+### Exercise 5 – Matrix Times Vector
 
 **Problem**
 
-Given
+Let
 
 $$
 A=
 \begin{pmatrix}
-1 & 1 \\
-0 & 1
+2 & -1 \\
+1 & 3
 \end{pmatrix},
 \qquad
-B=
+x=
 \begin{pmatrix}
-a & b \\
-c & d
-\end{pmatrix},
+4 \\
+2
+\end{pmatrix}.
 $$
 
-find the conditions on a,b,c,d under which AB=BA. Describe the general form of all such matrices B.
+Compute $Ax$. Then express $Ax$ as a linear combination of the columns of $A$, with coefficients coming from the vector $x$.
 
 **Solution**
 
-First calculate both products.
+**1. Multiply the matrix by the vector**
+
+Multiply each row of $A$ by the column vector $x$:
 
 $$
-AB=
+Ax=
 \begin{pmatrix}
-1 & 1 \\
-0 & 1
-\end{pmatrix}
-\begin{pmatrix}
-a & b \\
-c & d
+2(4)+(-1)(2) \\
+1(4)+3(2)
 \end{pmatrix}
 =
 \begin{pmatrix}
-a+c & b+d \\
-c & d
+6 \\
+10
 \end{pmatrix}.
 $$
 
+**2. Express the result using the columns**
+
+Let the first and second columns of $A$ be denoted by $a_1$ and $a_2$:
+
 $$
-BA=
+a_1=
 \begin{pmatrix}
-a & b \\
-c & d
+2 \\
+1
+\end{pmatrix},\qquad
+a_2=
+\begin{pmatrix}
+-1 \\
+3
+\end{pmatrix}.
+$$
+
+The entries of $x$ are $4$ and $2$, so the matrix-vector product is the linear combination $4a_1+2a_2$:
+
+$$
+Ax=
+4\begin{pmatrix}
+2 \\
+1
 \end{pmatrix}
-\begin{pmatrix}
-1 & 1 \\
-0 & 1
++
+2\begin{pmatrix}
+-1 \\
+3
 \end{pmatrix}
 =
 \begin{pmatrix}
-a & a+b \\
-c & c+d
-\end{pmatrix}.
-$$
-
-For AB=BA, corresponding entries must be equal. This gives
-
-$$
-a+c=a,\qquad b+d=a+b,\qquad c=c,\qquad d=c+d.
-$$
-
-The first equation gives c=0. The second gives d=a. The fourth also gives c=0, so it adds no new condition. There is no condition on b.
-
-Thus, a and b may be any numbers, while c=0 and d=a. The general form is
-
-$$
-B=
+8 \\
+4
+\end{pmatrix}
++
 \begin{pmatrix}
-a & b \\
-0 & a
+-2 \\
+6
+\end{pmatrix}
+=
+\begin{pmatrix}
+6 \\
+10
 \end{pmatrix}.
 $$
 
-Substituting these conditions into both product formulas gives the same matrix, which verifies the result.
+This agrees with the direct multiplication, verifying the result.
 
 ---

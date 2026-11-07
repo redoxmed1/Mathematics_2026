@@ -1,4 +1,4 @@
-## Question
+## Question 
 
 For $A=(0,0,0)$, $B=(2,1,0)$, $C=(1,3,2)$, use a cross product to find the parallelogram and triangle areas and explain the factor $1/2$.
 

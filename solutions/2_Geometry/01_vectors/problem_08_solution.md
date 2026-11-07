@@ -1,4 +1,4 @@
-## Question
+## Question 
 
 Determine whether $w=(5,1)$ is $au+bv$ for $u=(1,1)$ and $v=(2,-1)$; find and check the coefficients and explain their geometric meaning.
 

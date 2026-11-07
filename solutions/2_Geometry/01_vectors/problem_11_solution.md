@@ -1,4 +1,4 @@
-## Question
+## Question 
 
 Decompose $u=(3,4)$ into components parallel and perpendicular to $v=(1,2)$, perform both requested checks, and explain why they are independent.
 

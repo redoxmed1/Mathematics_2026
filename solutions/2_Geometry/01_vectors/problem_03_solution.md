@@ -1,4 +1,4 @@
-## Question
+## Question 
 
 Normalize $v=(3,4)$, check the unit length, reconstruct $v$, and explain what normalization changes.
 

@@ -1,4 +1,4 @@
-## Question
+## Question 
 
 For $u=(1,2,-1)$ and $v=(2,-1,3)$, test perpendicularity. Find $a$ such that $w=(2,-1,a)$ is perpendicular to $u$ and check it.
 

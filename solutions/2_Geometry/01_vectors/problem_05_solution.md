@@ -1,4 +1,4 @@
-## Question
+## Question 
 
 For $u=(1,1,0)$ and $v=(1,0,1)$, predict the angle type from the dot product, compute the angle, and compare.
 

@@ -1,4 +1,4 @@
-## Question
+## Question 
 
 For $u=(1,2,0)$ and $v=(0,1,3)$, compute $u\times v$, verify perpendicularity to both vectors, and compare with $v\times u$.
 

@@ -1,4 +1,4 @@
-## Question
+## Question 
 
 For $A=(0,0,0)$, $B=(1,2,0)$, $C=(0,1,1)$, and $D=(2,5,1)$, use a cross product and scalar triple-product check to decide whether the four points are coplanar.
 

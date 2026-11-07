@@ -1,4 +1,4 @@
-## Question
+## Question 
 
 For $A=(1,0,2)$, $B=(2,1,0)$, and $C=(0,3,1)$, construct two in-plane vectors, find a vector perpendicular to both, and check it with dot products.
 

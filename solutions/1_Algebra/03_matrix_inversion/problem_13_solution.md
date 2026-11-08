@@ -1,172 +1,153 @@
-### Exercise 13. Undoing a Composite Transformation
+# Exercise 7. Inverse of a Product
 
-**Problem**
+## Problem
 
-The matrices
+Given the matrices:
 
-S = [2  0]
-    [0  1]
+A =
 
-H = [1  1]
-    [0  1]
+| 1 | 1 |
+| - | - |
+| 0 | 1 |
 
-describe nonuniform scaling and shear.
+B =
 
-For T = HS, find T⁻¹ in two ways:
+| 2 | 0 |
+| - | - |
+| 0 | 3 |
 
-1. First calculate T, then calculate its inverse.
-2. Use the property (HS)⁻¹ = S⁻¹H⁻¹.
+Compute (AB)⁻¹ and B⁻¹A⁻¹.
 
-Compare the results. Additionally, calculate H⁻¹S⁻¹ and verify that using the incorrect order gives a different matrix.
+Check that the results are the same and explain the meaning of the reversed order.
 
-Explain the rule: "When undoing a composition of operations, we undo them from the end."
+## Solution
 
-**Solution**
+### Step 1. Calculate the product AB
 
-**Method 1. Calculate T first, then invert it**
+First, we multiply matrix A by matrix B. We multiply each row of A by each column of B.
 
-Since T = HS, we multiply H by S:
+AB =
 
-T = [1  1] × [2  0]
-    [0  1]   [0  1]
-
-Calculate each entry:
-
-T = [1(2)+1(0)   1(0)+1(1)]
-    [0(2)+1(0)   0(0)+1(1)]
+| 1×2 + 1×0 | 1×0 + 1×3 |
+| --------- | --------- |
+| 0×2 + 1×0 | 0×0 + 1×3 |
 
 Therefore:
 
-T = [2  1]
-    [0  1]
+AB =
 
-**Calculate the determinant**
+| 2 | 3 |
+| - | - |
+| 0 | 3 |
 
-det(T) = (2 × 1) - (1 × 0)
+### Step 2. Calculate the inverse of AB
 
-det(T) = 2
+For a 2×2 matrix, the inverse is obtained by dividing the matrix with exchanged diagonal elements and opposite off-diagonal elements by its determinant.
+
+The determinant of AB is:
+
+det(AB) = (2×3) - (3×0)
+
+det(AB) = 6
 
 Since the determinant is not zero, the inverse exists.
 
-**Calculate the inverse of T**
+Therefore:
 
-For a 2 × 2 matrix:
+(AB)⁻¹ =
 
-T = [a  b]
-    [c  d]
+| 3/6 | -3/6 |
+| --- | ---- |
+| 0/6 | 2/6  |
 
-The inverse is:
+Simplifying:
 
-T⁻¹ = 1/(ad - bc) × [ d  -b]
-                      [-c   a]
+(AB)⁻¹ =
 
-Substitute the values:
+| 1/2 | -1/2 |
+| --- | ---- |
+| 0   | 1/3  |
 
-T⁻¹ = 1/2 × [1  -1]
-             [0   2]
+### Step 3. Calculate A⁻¹ and B⁻¹
+
+First, we calculate the inverse of A.
+
+det(A) = (1×1) - (1×0) = 1
 
 Therefore:
 
-T⁻¹ = [1/2  -1/2]
-      [ 0     1  ]
+A⁻¹ =
 
+| 1 | -1 |
+| - | -- |
+| 0 | 1  |
 
-**Method 2. Reverse the order of the inverses**
+Next, we calculate the inverse of B.
 
-First, calculate the inverse of S:
-
-S = [2  0]
-    [0  1]
-
-S⁻¹ = [1/2  0]
-      [ 0   1]
-
-Now calculate the inverse of H:
-
-H = [1  1]
-    [0  1]
-
-H⁻¹ = [1  -1]
-      [0   1]
-
-Using the inverse of a product property:
-
-(HS)⁻¹ = S⁻¹H⁻¹
-
-Calculate:
-
-S⁻¹H⁻¹ = [1/2  0] × [1  -1]
-          [ 0   1]   [0   1]
-
-Multiply the matrices:
-
-S⁻¹H⁻¹ = [1/2(1)+0(0)   1/2(-1)+0(1)]
-          [0(1)+1(0)     0(-1)+1(1)]
+det(B) = (2×3) - (0×0) = 6
 
 Therefore:
 
-S⁻¹H⁻¹ = [1/2  -1/2]
-          [ 0     1  ]
+B⁻¹ =
 
-Both methods give the same result:
+| 1/2 | 0   |
+| --- | --- |
+| 0   | 1/3 |
 
-T⁻¹ = [1/2  -1/2]
-      [ 0     1  ]
+### Step 4. Calculate B⁻¹A⁻¹
 
+Now, we multiply B⁻¹ by A⁻¹.
 
-**Check the incorrect order**
+B⁻¹A⁻¹ =
 
-Now calculate H⁻¹S⁻¹:
-
-H⁻¹S⁻¹ = [1  -1] × [1/2  0]
-          [0   1]   [ 0   1]
-
-Multiply the matrices:
-
-H⁻¹S⁻¹ = [1(1/2)+(-1)(0)   1(0)+(-1)(1)]
-          [0(1/2)+1(0)      0(0)+1(1)]
+| (1/2×1) + (0×0) | (1/2×-1) + (0×1) |
+| --------------- | ---------------- |
+| (0×1) + (1/3×0) | (0×-1) + (1/3×1) |
 
 Therefore:
 
-H⁻¹S⁻¹ = [1/2  -1]
-          [ 0    1]
+B⁻¹A⁻¹ =
 
-This result is different from the correct inverse because the upper-right entry is -1 instead of -1/2.
+| 1/2 | -1/2 |
+| --- | ---- |
+| 0   | 1/3  |
 
-Therefore, the order of multiplication is important.
+### Step 5. Compare the results
 
+From Step 2:
 
-**Geometric Explanation**
+(AB)⁻¹ =
 
-The transformation T = HS applies S first and then H.
+| 1/2 | -1/2 |
+| --- | ---- |
+| 0   | 1/3  |
 
-To undo the complete transformation, we must undo H first and then undo S.
+From Step 4:
 
-This is why the correct inverse is:
+B⁻¹A⁻¹ =
 
-T⁻¹ = S⁻¹H⁻¹
+| 1/2 | -1/2 |
+| --- | ---- |
+| 0   | 1/3  |
 
-It is not equal to H⁻¹S⁻¹.
+Both matrices are identical.
 
-
-**Conclusion**
-
-Both methods give the same correct inverse:
-
-T⁻¹ = [1/2  -1/2]
-      [ 0     1  ]
-
-The calculation of H⁻¹S⁻¹ gives a different matrix:
-
-H⁻¹S⁻¹ = [1/2  -1]
-          [ 0    1]
-
-This confirms that the order of matrix multiplication matters.
-
-The general rule is:
+Therefore:
 
 (AB)⁻¹ = B⁻¹A⁻¹
 
-When finding the inverse of a product, we must reverse the order of the matrices.
+### Step 6. Explain the reversed order
 
-Therefore, the exercise confirms that to undo a composition of transformations, we must undo the operations in reverse order.
+The inverse of a product reverses the order of multiplication.
+
+When we calculate AB, matrix B acts first and matrix A acts second.
+
+To undo these operations, we must first undo A using A⁻¹ and then undo B using B⁻¹.
+
+This is why the inverse of AB is B⁻¹A⁻¹ rather than A⁻¹B⁻¹.
+
+**Conclusion:**
+
+The calculations confirm that the inverse of a product is equal to the product of the inverses in reversed order.
+
+(AB)⁻¹ = B⁻¹A⁻¹

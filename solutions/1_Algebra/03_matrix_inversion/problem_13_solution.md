@@ -5,8 +5,7 @@
 The matrices
 
 \[
-S=
-\begin{pmatrix}
+S=\begin{pmatrix}
 2 & 0 \\
 0 & 1
 \end{pmatrix},

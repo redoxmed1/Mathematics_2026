@@ -2,28 +2,48 @@
 
 ## Problem
 
-The matrix sizes are:
+Given four matrices with the following dimensions:
 
 $$
-A_{2\times3},\qquad
-B_{3\times4},\qquad
-C_{4\times2},\qquad
-D_{2\times2}
+A=
+\begin{pmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}
+\end{pmatrix}
+$$
+
+$$
+B=
+\begin{pmatrix}
+b_{11} & b_{12} & b_{13} & b_{14}\\
+b_{21} & b_{22} & b_{23} & b_{24}\\
+b_{31} & b_{32} & b_{33} & b_{34}
+\end{pmatrix}
+$$
+
+$$
+C=
+\begin{pmatrix}
+c_{11} & c_{12}\\
+c_{21} & c_{22}\\
+c_{31} & c_{32}\\
+c_{41} & c_{42}
+\end{pmatrix}
+$$
+
+$$
+D=
+\begin{pmatrix}
+d_{11} & d_{12}\\
+d_{21} & d_{22}
+\end{pmatrix}
 $$
 
 For the following products:
 
-$$
-AB,\quad BA,\quad BC,\quad CB,
-$$
+AB, BA, BC, CB, AC, CA, AD, and DA,
 
-$$
-AC,\quad CA,\quad AD,\quad DA
-$$
-
-determine whether each product is defined.
-
-If it is defined, state the size of the resulting matrix.
+determine whether each product is defined. If it is defined, state the dimensions of the resulting matrix.
 
 Justify each decision using the dimension compatibility condition.
 
@@ -33,19 +53,17 @@ Justify each decision using the dimension compatibility condition.
 
 Two matrices can be multiplied when the number of columns of the first matrix equals the number of rows of the second matrix.
 
-If the first matrix has dimensions m × n and the second matrix has dimensions n × p, the resulting matrix has dimensions m × p.
-
-Therefore, the rule is:
+The general rule is:
 
 $$
 (m\times n)(n\times p)=m\times p
 $$
 
-### Step 2. Calculate and Check All Eight Products
+The inner dimensions must be equal, and the outer dimensions determine the size of the result.
+
+### Step 2. Check All Eight Products
 
 **1. Product AB**
-
-The dimensions are:
 
 $$
 A_{2\times3}B_{3\times4}
@@ -57,12 +75,12 @@ $$
 3=3
 $$
 
-Therefore, the product is defined.
+Therefore, AB is defined.
 
-The resulting dimensions are:
+The resulting matrix has dimensions:
 
 $$
-AB \text{ is } 2\times4
+AB_{2\times4}
 $$
 
 **2. Product BA**
@@ -71,7 +89,7 @@ $$
 B_{3\times4}A_{2\times3}
 $$
 
-The inner dimensions are:
+The inner dimensions are not equal:
 
 $$
 4\ne2
@@ -85,18 +103,18 @@ $$
 B_{3\times4}C_{4\times2}
 $$
 
-The inner dimensions are:
+The inner dimensions are equal:
 
 $$
 4=4
 $$
 
-Therefore, the product is defined.
+Therefore, BC is defined.
 
-The resulting dimensions are:
+The resulting matrix has dimensions:
 
 $$
-BC \text{ is } 3\times2
+BC_{3\times2}
 $$
 
 **4. Product CB**
@@ -105,7 +123,7 @@ $$
 C_{4\times2}B_{3\times4}
 $$
 
-The inner dimensions are:
+The inner dimensions are not equal:
 
 $$
 2\ne3
@@ -119,7 +137,7 @@ $$
 A_{2\times3}C_{4\times2}
 $$
 
-The inner dimensions are:
+The inner dimensions are not equal:
 
 $$
 3\ne4
@@ -133,18 +151,18 @@ $$
 C_{4\times2}A_{2\times3}
 $$
 
-The inner dimensions are:
+The inner dimensions are equal:
 
 $$
 2=2
 $$
 
-Therefore, the product is defined.
+Therefore, CA is defined.
 
-The resulting dimensions are:
+The resulting matrix has dimensions:
 
 $$
-CA \text{ is } 4\times3
+CA_{4\times3}
 $$
 
 **7. Product AD**
@@ -153,7 +171,7 @@ $$
 A_{2\times3}D_{2\times2}
 $$
 
-The inner dimensions are:
+The inner dimensions are not equal:
 
 $$
 3\ne2
@@ -164,63 +182,5 @@ Therefore, AD is not defined.
 **8. Product DA**
 
 $$
-D_{2\times2}A_{2\times3}
+D_{2\times2}A_{2
 $$
-
-The inner dimensions are:
-
-$$
-2=2
-$$
-
-Therefore, the product is defined.
-
-The resulting dimensions are:
-
-$$
-DA \text{ is } 2\times3
-$$
-
-### Step 3. Final Results
-
-The results are:
-
-$$
-AB \text{ is } 2\times4
-$$
-
-$$
-BA \text{ is not defined}
-$$
-
-$$
-BC \text{ is } 3\times2
-$$
-
-$$
-CB \text{ is not defined}
-$$
-
-$$
-AC \text{ is not defined}
-$$
-
-$$
-CA \text{ is } 4\times3
-$$
-
-$$
-AD \text{ is not defined}
-$$
-
-$$
-DA \text{ is } 2\times3
-$$
-
-### Conclusion
-
-Matrix multiplication is possible only when the number of columns of the first matrix equals the number of rows of the second matrix.
-
-For every defined product, the resulting matrix takes its dimensions from the outside numbers.
-
----

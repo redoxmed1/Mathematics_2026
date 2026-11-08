@@ -1,153 +1,152 @@
-# Exercise 7. Inverse of a Product
+### Exercise 7. Inverse of a Product
 
-## Problem
+**Problem**
 
 Given the matrices:
 
 A =
-
-| 1 | 1 |
-| - | - |
-| 0 | 1 |
+$$
+\begin{pmatrix}
+1 & 1 \\
+0 & 1
+\end{pmatrix}
+$$
 
 B =
+$$
+\begin{pmatrix}
+2 & 0 \\
+0 & 3
+\end{pmatrix}
+$$
 
-| 2 | 0 |
-| - | - |
-| 0 | 3 |
-
-Compute (AB)⁻¹ and B⁻¹A⁻¹.
+Compute $(AB)^{-1}$ and $B^{-1}A^{-1}$.
 
 Check that the results are the same and explain the meaning of the reversed order.
 
-## Solution
+**Solution**
 
-### Step 1. Calculate the product AB
+**Step 1. Calculate AB**
 
-First, we multiply matrix A by matrix B. We multiply each row of A by each column of B.
-
+$$
 AB =
+\begin{pmatrix}
+1 & 1 \\
+0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+2 & 0 \\
+0 & 3
+\end{pmatrix}
+$$
 
-| 1×2 + 1×0 | 1×0 + 1×3 |
-| --------- | --------- |
-| 0×2 + 1×0 | 0×0 + 1×3 |
-
-Therefore:
-
+$$
 AB =
+\begin{pmatrix}
+2 & 3 \\
+0 & 3
+\end{pmatrix}
+$$
 
-| 2 | 3 |
-| - | - |
-| 0 | 3 |
+**Step 2. Calculate (AB)⁻¹**
 
-### Step 2. Calculate the inverse of AB
-
-For a 2×2 matrix, the inverse is obtained by dividing the matrix with exchanged diagonal elements and opposite off-diagonal elements by its determinant.
-
-The determinant of AB is:
-
-det(AB) = (2×3) - (3×0)
-
-det(AB) = 6
+$$
+\det(AB) = 2(3) - 3(0) = 6
+$$
 
 Since the determinant is not zero, the inverse exists.
 
-Therefore:
+$$
+(AB)^{-1} =
+\frac{1}{6}
+\begin{pmatrix}
+3 & -3 \\
+0 & 2
+\end{pmatrix}
+$$
 
-(AB)⁻¹ =
+$$
+(AB)^{-1} =
+\begin{pmatrix}
+1/2 & -1/2 \\
+0 & 1/3
+\end{pmatrix}
+$$
 
-| 3/6 | -3/6 |
-| --- | ---- |
-| 0/6 | 2/6  |
+**Step 3. Calculate A⁻¹ and B⁻¹**
 
-Simplifying:
+$$
+A^{-1} =
+\begin{pmatrix}
+1 & -1 \\
+0 & 1
+\end{pmatrix}
+$$
 
-(AB)⁻¹ =
+$$
+B^{-1} =
+\begin{pmatrix}
+1/2 & 0 \\
+0 & 1/3
+\end{pmatrix}
+$$
 
-| 1/2 | -1/2 |
-| --- | ---- |
-| 0   | 1/3  |
+**Step 4. Calculate B⁻¹A⁻¹**
 
-### Step 3. Calculate A⁻¹ and B⁻¹
+$$
+B^{-1}A^{-1} =
+\begin{pmatrix}
+1/2 & 0 \\
+0 & 1/3
+\end{pmatrix}
+\begin{pmatrix}
+1 & -1 \\
+0 & 1
+\end{pmatrix}
+$$
 
-First, we calculate the inverse of A.
+$$
+B^{-1}A^{-1} =
+\begin{pmatrix}
+1/2 & -1/2 \\
+0 & 1/3
+\end{pmatrix}
+$$
 
-det(A) = (1×1) - (1×0) = 1
+**Step 5. Compare the Results**
 
-Therefore:
+$$
+(AB)^{-1} =
+\begin{pmatrix}
+1/2 & -1/2 \\
+0 & 1/3
+\end{pmatrix}
+$$
 
-A⁻¹ =
-
-| 1 | -1 |
-| - | -- |
-| 0 | 1  |
-
-Next, we calculate the inverse of B.
-
-det(B) = (2×3) - (0×0) = 6
-
-Therefore:
-
-B⁻¹ =
-
-| 1/2 | 0   |
-| --- | --- |
-| 0   | 1/3 |
-
-### Step 4. Calculate B⁻¹A⁻¹
-
-Now, we multiply B⁻¹ by A⁻¹.
-
-B⁻¹A⁻¹ =
-
-| (1/2×1) + (0×0) | (1/2×-1) + (0×1) |
-| --------------- | ---------------- |
-| (0×1) + (1/3×0) | (0×-1) + (1/3×1) |
-
-Therefore:
-
-B⁻¹A⁻¹ =
-
-| 1/2 | -1/2 |
-| --- | ---- |
-| 0   | 1/3  |
-
-### Step 5. Compare the results
-
-From Step 2:
-
-(AB)⁻¹ =
-
-| 1/2 | -1/2 |
-| --- | ---- |
-| 0   | 1/3  |
-
-From Step 4:
-
-B⁻¹A⁻¹ =
-
-| 1/2 | -1/2 |
-| --- | ---- |
-| 0   | 1/3  |
-
-Both matrices are identical.
+$$
+B^{-1}A^{-1} =
+\begin{pmatrix}
+1/2 & -1/2 \\
+0 & 1/3
+\end{pmatrix}
+$$
 
 Therefore:
 
-(AB)⁻¹ = B⁻¹A⁻¹
+$$
+\boxed{(AB)^{-1} = B^{-1}A^{-1}}
+$$
 
-### Step 6. Explain the reversed order
+**Step 6. Explanation**
 
 The inverse of a product reverses the order of multiplication.
 
-When we calculate AB, matrix B acts first and matrix A acts second.
+When multiplying AB, matrix B acts first, followed by matrix A.
 
 To undo these operations, we must first undo A using A⁻¹ and then undo B using B⁻¹.
 
-This is why the inverse of AB is B⁻¹A⁻¹ rather than A⁻¹B⁻¹.
+This explains why the order is reversed.
 
-**Conclusion:**
+**Conclusion**
 
 The calculations confirm that the inverse of a product is equal to the product of the inverses in reversed order.
-
-(AB)⁻¹ = B⁻¹A⁻¹

@@ -1,41 +1,205 @@
-### Exercise 10. Inverse of a 2x2 Matrix
+### Exercise 10. Columns of a Matrix Product
 
 **Problem**
 
-Given
+Given:
 
-$$ A = \begin{pmatrix} 3 & 1 \\ 5 & 2 \end{pmatrix}, $$
+$$
+A=\begin{pmatrix}
+1&2&0\\
+0&1&1
+\end{pmatrix},
+\qquad
+B=\begin{pmatrix}
+1&2\\
+-1&0\\
+3&1
+\end{pmatrix}
+$$
 
-find the inverse matrix $A^{-1}$ using the standard 2x2 inverse formula, and verify that $AA^{-1} = I$.
+Denote the columns of B by b₁ and b₂.
 
-**Solution**
+1. Compute Ab₁ and Ab₂.
+2. Compute the matrix AB.
+3. Compare the results and explain why the columns of AB are exactly the vectors Ab₁ and Ab₂.
 
-**1. Compute the determinant**
+### Solution
 
-The determinant of $A$ is:
+**1. Identify the columns of B**
 
-$$ \det(A) = 3(2) - 1(5) = 6 - 5 = 1. $$
+The first column of B is:
 
-**2. Apply the inverse formula**
+$$
+b_1=\begin{pmatrix}
+1\\
+-1\\
+3
+\end{pmatrix}
+$$
 
-For a $2 \times 2$ matrix $A$, written as
+The second column of B is:
 
-$$ A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}, $$
+$$
+b_2=\begin{pmatrix}
+2\\
+0\\
+1
+\end{pmatrix}
+$$
 
-the inverse is given by:
+**2. Calculate Ab₁**
 
-$$ A^{-1} = \frac{1}{\det(A)} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}. $$
+$$
+Ab_1=
+\begin{pmatrix}
+1&2&0\\
+0&1&1
+\end{pmatrix}
+\begin{pmatrix}
+1\\
+-1\\
+3
+\end{pmatrix}
+$$
 
-Substituting our values:
+Multiply each row of A by the column vector:
 
-$$ A^{-1} = \frac{1}{1} \begin{pmatrix} 2 & -1 \\ -5 & 3 \end{pmatrix} = \begin{pmatrix} 2 & -1 \\ -5 & 3 \end{pmatrix}. $$
+$$
+Ab_1=
+\begin{pmatrix}
+1(1)+2(-1)+0(3)\\
+0(1)+1(-1)+1(3)
+\end{pmatrix}
+$$
 
-**3. Verify the result**
+$$
+Ab_1=
+\begin{pmatrix}
+1-2+0\\
+0-1+3
+\end{pmatrix}
+$$
 
-Multiply $A$ by $A^{-1}$ to confirm the product is the identity matrix $I$:
+Therefore:
 
-$$ AA^{-1} = \begin{pmatrix} 3 & 1 \\ 5 & 2 \end{pmatrix} \begin{pmatrix} 2 & -1 \\ -5 & 3 \end{pmatrix} = \begin{pmatrix} 3(2) + 1(-5) & 3(-1) + 1(3) \\ 5(2) + 2(-5) & 5(-1) + 2(3) \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}. $$
+$$
+Ab_1=
+\begin{pmatrix}
+-1\\
+2
+\end{pmatrix}
+$$
 
-The result is verified.
+**3. Calculate Ab₂**
 
----
+$$
+Ab_2=
+\begin{pmatrix}
+1&2&0\\
+0&1&1
+\end{pmatrix}
+\begin{pmatrix}
+2\\
+0\\
+1
+\end{pmatrix}
+$$
+
+$$
+Ab_2=
+\begin{pmatrix}
+1(2)+2(0)+0(1)\\
+0(2)+1(0)+1(1)
+\end{pmatrix}
+$$
+
+$$
+Ab_2=
+\begin{pmatrix}
+2+0+0\\
+0+0+1
+\end{pmatrix}
+$$
+
+Therefore:
+
+$$
+Ab_2=
+\begin{pmatrix}
+2\\
+1
+\end{pmatrix}
+$$
+
+**4. Calculate the matrix AB**
+
+We multiply A by B:
+
+$$
+AB=
+\begin{pmatrix}
+1&2&0\\
+0&1&1
+\end{pmatrix}
+\begin{pmatrix}
+1&2\\
+-1&0\\
+3&1
+\end{pmatrix}
+$$
+
+Calculate each entry:
+
+$$
+AB=
+\begin{pmatrix}
+1(1)+2(-1)+0(3)&1(2)+2(0)+0(1)\\
+0(1)+1(-1)+1(3)&0(2)+1(0)+1(1)
+\end{pmatrix}
+$$
+
+$$
+AB=
+\begin{pmatrix}
+-1&2\\
+2&1
+\end{pmatrix}
+$$
+
+**5. Compare the results**
+
+We calculated:
+
+$$
+Ab_1=
+\begin{pmatrix}
+-1\\
+2
+\end{pmatrix}
+$$
+
+$$
+Ab_2=
+\begin{pmatrix}
+2\\
+1
+\end{pmatrix}
+$$
+
+And:
+
+$$
+AB=
+\begin{pmatrix}
+-1&2\\
+2&1
+\end{pmatrix}
+$$
+
+The first column of AB is exactly Ab₁, and the second column is exactly Ab₂.
+
+**Conclusion**
+
+The columns of the product AB are obtained by multiplying A by each column of B separately.
+
+Therefore, the matrix product AB is formed by placing the vectors Ab₁ and Ab₂ next to each other as columns. This confirms that matrix multiplication can be understood as

@@ -5,12 +5,14 @@
 The matrices
 
 \[
-S=\begin{pmatrix}
+S=
+\begin{pmatrix}
 2 & 0 \\
 0 & 1
 \end{pmatrix},
 \qquad
-H=\begin{pmatrix}
+H=
+\begin{pmatrix}
 1 & 1 \\
 0 & 1
 \end{pmatrix}
@@ -30,7 +32,8 @@ Compare the results. Additionally, compute H⁻¹S⁻¹ and verify that using th
 Since T = HS,
 
 \[
-T=\begin{pmatrix}
+T=
+\begin{pmatrix}
 1 & 1 \\
 0 & 1
 \end{pmatrix}
@@ -41,11 +44,13 @@ T=\begin{pmatrix}
 \]
 
 \[
-=\begin{pmatrix}
+=
+\begin{pmatrix}
 1(2)+1(0) & 1(0)+1(1) \\
 0(2)+1(0) & 0(0)+1(1)
 \end{pmatrix}
-=\begin{pmatrix}
+=
+\begin{pmatrix}
 2 & 1 \\
 0 & 1
 \end{pmatrix}.
@@ -62,13 +67,15 @@ Since the determinant is nonzero, the inverse exists.
 Using the inverse formula for a 2 × 2 matrix:
 
 \[
-T^{-1}=
+T^{-1}
+=
 \frac12
 \begin{pmatrix}
 1 & -1 \\
 0 & 2
 \end{pmatrix}
-=\begin{pmatrix}
+=
+\begin{pmatrix}
 \frac12 & -\frac12 \\
 0 & 1
 \end{pmatrix}.
@@ -79,14 +86,16 @@ T^{-1}=
 First, calculate the inverse of S and H:
 
 \[
-S^{-1}=\begin{pmatrix}
+S^{-1}=
+\begin{pmatrix}
 \frac12 & 0 \\
 0 & 1
 \end{pmatrix}
 \]
 
 \[
-H^{-1}=\begin{pmatrix}
+H^{-1}=
+\begin{pmatrix}
 1 & -1 \\
 0 & 1
 \end{pmatrix}.
@@ -102,7 +111,8 @@ Calculate:
 
 \[
 S^{-1}H^{-1}
-=\begin{pmatrix}
+=
+\begin{pmatrix}
 \frac12 & 0 \\
 0 & 1
 \end{pmatrix}
@@ -113,7 +123,8 @@ S^{-1}H^{-1}
 \]
 
 \[
-=\begin{pmatrix}
+=
+\begin{pmatrix}
 \frac12 & -\frac12 \\
 0 & 1
 \end{pmatrix}.
@@ -122,7 +133,8 @@ S^{-1}H^{-1}
 Both methods give the same result:
 
 \[
-T^{-1}=\begin{pmatrix}
+T^{-1}=
+\begin{pmatrix}
 \frac12 & -\frac12 \\
 0 & 1
 \end{pmatrix}.
@@ -134,7 +146,8 @@ Now calculate H⁻¹S⁻¹ without reversing the order:
 
 \[
 H^{-1}S^{-1}
-=\begin{pmatrix}
+=
+\begin{pmatrix}
 1 & -1 \\
 0 & 1
 \end{pmatrix}
@@ -145,7 +158,8 @@ H^{-1}S^{-1}
 \]
 
 \[
-=\begin{pmatrix}
+=
+\begin{pmatrix}
 \frac12 & -1 \\
 0 & 1
 \end{pmatrix}.
@@ -174,7 +188,8 @@ The order of operations is reversed when calculating the inverse of a product.
 Both methods produce the same inverse matrix:
 
 \[
-T^{-1}=\begin{pmatrix}
+T^{-1}=
+\begin{pmatrix}
 \frac12 & -\frac12 \\
 0 & 1
 \end{pmatrix}.

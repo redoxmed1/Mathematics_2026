@@ -1,124 +1,226 @@
-# Exercise 1 – Matrix Size and Entries
+# Exercise 3. When Can Matrices Be Multiplied?
 
 ## Problem
 
-Given
+The matrix sizes are:
 
 $$
-A =
-\begin{pmatrix}
-2 & -1 & 3 \\
-0 & 4 & 5
-\end{pmatrix}
+A_{2\times3},\qquad
+B_{3\times4},\qquad
+C_{4\times2},\qquad
+D_{2\times2}
+$$
+
+For the following products:
+
+$$
+AB,\quad BA,\quad BC,\quad CB,
 $$
 
 $$
-B =
-\begin{pmatrix}
-1 & 0 \\
--2 & 3 \\
-4 & 1
-\end{pmatrix}
+AC,\quad CA,\quad AD,\quad DA
 $$
 
-1. State the sizes of matrices $A$ and $B$.
-2. Read off the entries $a_{12}$, $a_{23}$, $b_{21}$, and $b_{32}$.
-3. Write the second row of $A$ and the first column of $B$ as vectors.
+determine whether each product is defined.
 
----
+If it is defined, state the size of the resulting matrix.
+
+Justify each decision using the dimension compatibility condition.
 
 ## Solution
 
-### Step 1: State the matrix sizes
+### Step 1. Explain the Multiplication Rule
 
-The size of a matrix is given by the number of rows followed by the number of columns ($m \times n$).
-- Matrix $A$ has 2 rows and 3 columns.
-- Matrix $B$ has 3 rows and 2 columns.
+Two matrices can be multiplied when the number of columns of the first matrix equals the number of rows of the second matrix.
 
-Therefore:
+If the first matrix has dimensions m × n and the second matrix has dimensions n × p, the resulting matrix has dimensions m × p.
+
+Therefore, the rule is:
 
 $$
-\text{Size of } A = 2 \times 3,
-\qquad
-\text{Size of } B = 3 \times 2
+(m\times n)(n\times p)=m\times p
 $$
+
+### Step 2. Calculate and Check All Eight Products
+
+**1. Product AB**
+
+The dimensions are:
+
+$$
+A_{2\times3}B_{3\times4}
+$$
+
+The inner dimensions are equal:
+
+$$
+3=3
+$$
+
+Therefore, the product is defined.
+
+The resulting dimensions are:
+
+$$
+AB \text{ is } 2\times4
+$$
+
+**2. Product BA**
+
+$$
+B_{3\times4}A_{2\times3}
+$$
+
+The inner dimensions are:
+
+$$
+4\ne2
+$$
+
+Therefore, BA is not defined.
+
+**3. Product BC**
+
+$$
+B_{3\times4}C_{4\times2}
+$$
+
+The inner dimensions are:
+
+$$
+4=4
+$$
+
+Therefore, the product is defined.
+
+The resulting dimensions are:
+
+$$
+BC \text{ is } 3\times2
+$$
+
+**4. Product CB**
+
+$$
+C_{4\times2}B_{3\times4}
+$$
+
+The inner dimensions are:
+
+$$
+2\ne3
+$$
+
+Therefore, CB is not defined.
+
+**5. Product AC**
+
+$$
+A_{2\times3}C_{4\times2}
+$$
+
+The inner dimensions are:
+
+$$
+3\ne4
+$$
+
+Therefore, AC is not defined.
+
+**6. Product CA**
+
+$$
+C_{4\times2}A_{2\times3}
+$$
+
+The inner dimensions are:
+
+$$
+2=2
+$$
+
+Therefore, the product is defined.
+
+The resulting dimensions are:
+
+$$
+CA \text{ is } 4\times3
+$$
+
+**7. Product AD**
+
+$$
+A_{2\times3}D_{2\times2}
+$$
+
+The inner dimensions are:
+
+$$
+3\ne2
+$$
+
+Therefore, AD is not defined.
+
+**8. Product DA**
+
+$$
+D_{2\times2}A_{2\times3}
+$$
+
+The inner dimensions are:
+
+$$
+2=2
+$$
+
+Therefore, the product is defined.
+
+The resulting dimensions are:
+
+$$
+DA \text{ is } 2\times3
+$$
+
+### Step 3. Final Results
+
+The results are:
+
+$$
+AB \text{ is } 2\times4
+$$
+
+$$
+BA \text{ is not defined}
+$$
+
+$$
+BC \text{ is } 3\times2
+$$
+
+$$
+CB \text{ is not defined}
+$$
+
+$$
+AC \text{ is not defined}
+$$
+
+$$
+CA \text{ is } 4\times3
+$$
+
+$$
+AD \text{ is not defined}
+$$
+
+$$
+DA \text{ is } 2\times3
+$$
+
+### Conclusion
+
+Matrix multiplication is possible only when the number of columns of the first matrix equals the number of rows of the second matrix.
+
+For every defined product, the resulting matrix takes its dimensions from the outside numbers.
 
 ---
-
-### Step 2: Read off the specified entries
-
-In notation $a_{ij}$ or $b_{ij}$, the first index $i$ indicates the row, and the second index $j$ indicates the column:
-
-- $a_{12}$ is in row 1, column 2 of $A$:
-
-$$
-a_{12} = -1
-$$
-
-- $a_{23}$ is in row 2, column 3 of $A$:
-
-$$
-a_{23} = 5
-$$
-
-- $b_{21}$ is in row 2, column 1 of $B$:
-
-$$
-b_{21} = -2
-$$
-
-- $b_{32}$ is in row 3, column 2 of $B$:
-
-$$
-b_{32} = 1
-$$
-
----
-
-### Step 3: Write the specified row and column vectors
-
-- The second row of $A$ written as a row vector:
-
-$$
-\text{Second row of } A =
-\begin{pmatrix}
-0 & 4 & 5
-\end{pmatrix}
-$$
-
-- The first column of $B$ written as a vertical column vector:
-
-$$
-\text{First column of } B =
-\begin{pmatrix}
-1 \\
--2 \\
-4
-\end{pmatrix}
-$$
-
----
-
-## Conclusion
-
-Matrix $A$ is of size $2 \times 3$ and matrix $B$ is of size $3 \times 2$.
-
-The requested entries are $a_{12} = -1$, $a_{23} = 5$, $b_{21} = -2$, and $b_{32} = 1$.
-
-The second row of $A$ is:
-
-$$
-\begin{pmatrix}
-0 & 4 & 5
-\end{pmatrix}
-$$
-
-And the first column of $B$ is the vertical column vector:
-
-$$
-\begin{pmatrix}
-1 \\
--2 \\
-4
-\end{pmatrix}
-$$

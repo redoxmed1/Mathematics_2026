@@ -9,8 +9,7 @@ S=\begin{pmatrix}
 0 & 1
 \end{pmatrix},
 \qquad
-H=
-\begin{pmatrix}
+H=\begin{pmatrix}
 1 & 1 \\
 0 & 1
 \end{pmatrix}

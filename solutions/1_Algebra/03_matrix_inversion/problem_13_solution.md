@@ -123,8 +123,7 @@ This explains why matrix multiplication order reverses when taking the inverse o
 
 Both methods produce the same inverse matrix:
 \[
-T^{-1}=
-\begin{pmatrix} 
+T^{-1}=\begin{pmatrix} 
 \frac12 & -\frac12 \\
 0 & 1
 \end{pmatrix}.

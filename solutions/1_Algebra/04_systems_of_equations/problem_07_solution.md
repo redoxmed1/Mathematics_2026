@@ -1,107 +1,83 @@
-### Exercise 7. Choosing a Method Deliberately
+```markdown
+### Exercise 7. Solving a System of Equations
 
 **Problem**
 
-Choose the best method for each situation and justify your choice.
+Solve the following system of linear equations:
 
-1. One system with a triangular coefficient matrix.
-2. Three systems with the same invertible matrix, when the inverse is already known.
-3. One 3x3 system where the inverse is not given and only one solution vector is required.
+2x - y = 3
 
-For case 1, solve completely. For cases 2 and 3, describe the method.
+4y = 8
+
+Find the values of x and y. Show your method and verify the solution by substituting the values into both original equations.
 
 **Solution**
 
-**Case 1: Triangular coefficient matrix**
+**Step 1. Find the value of y**
 
-The system is
+From the second equation:
 
-$$
-\begin{cases}
-2x-y=3, \\
-4y=8.
-\end{cases}
-$$
+4y = 8
 
-Back substitution is the simplest method.
+Divide both sides by 4:
 
-The second equation gives
+y = 8/4
 
-$$
-4y=8
-$$
+Therefore:
 
-Therefore,
+y = 2
 
-$$
-y=2
-$$
+**Step 2. Find the value of x**
 
-Substitute into the first equation:
+Substitute y = 2 into the first equation:
 
-$$
-2x-2=3
-$$
+2x - y = 3
 
-Therefore,
+2x - 2 = 3
 
-$$
-2x=5
-$$
+Add 2 to both sides:
 
-and
+2x = 5
 
-$$
-x=\frac{5}{2}
-$$
+Divide both sides by 2:
 
-The solution is
+x = 5/2
 
-$$
-\begin{pmatrix}
-x \\
-y \\
-\end{pmatrix}
-=\begin{pmatrix}
-\frac{5}{2} \\
-2 \\
-\end{pmatrix}
-$$
+**Step 3. Verify the solution**
 
-**Case 2: Three systems with the same invertible matrix**
+We obtained:
 
-For the systems
+x = 5/2
 
-$$
-Ax=b_1
-$$
+y = 2
 
-$$
-Ax=b_2
-$$
+Check the first equation:
 
-$$
-Ax=b_3
-$$
+2x - y = 3
 
-when the inverse is already known, use
+2(5/2) - 2 = 3
 
-$$
-x_1=A^{-1}b_1
-$$
+5 - 2 = 3
 
-$$
-x_2=A^{-1}b_2
-$$
+3 = 3
 
-$$
-x_3=A^{-1}b_3
-$$
+Check the second equation:
 
-The inverse matrix is calculated only once and reused for all three systems.
+4y = 8
 
-**Case 3: One system with an unknown inverse**
+4(2) = 8
 
-Gaussian elimination is suitable because only one solution vector is required.
+8 = 8
 
-Calculating the full inverse matrix would require extra work that is unnecessary.
+Both equations are satisfied.
+
+**Final Answer**
+
+x = 5/2
+
+y = 2
+
+The solution of the system is:
+
+(x, y) = (5/2, 2)
+```

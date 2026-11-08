@@ -1,94 +1,99 @@
-### Exercise 6. Shifted Ellipse
+### Exercise 7. Classifying a Second-Degree Equation
 
 **Problem**
 
-Reduce
+Determine the type of object described by:
 
-4x² + 9y² - 16x + 18y - 11 = 0
+1. 4x² + 9y² = 36
+2. x² - y² = 1
+3. x² - 4y = 0
+4. x² + y² + 1 = 0
 
-to canonical form. Give the center and semiaxis lengths. Check that substituting the coordinates of the center into the left-hand side gives a value consistent with the form you obtained.
+In the last case, explain why there are no real points.
 
 **Solution**
 
-**Step 1. Group the terms**
+**1. Equation:**
 
-4x² - 16x + 9y² + 18y = 11
-
-**Step 2. Factor the coefficients**
-
-4(x² - 4x) + 9(y² + 2y) = 11
-
-**Step 3. Complete the square**
-
-For the x terms:
-
-x² - 4x = (x - 2)² - 4
-
-For the y terms:
-
-y² + 2y = (y + 1)² - 1
-
-Substitute:
-
-4[(x - 2)² - 4] + 9[(y + 1)² - 1] = 11
-
-**Step 4. Simplify**
-
-4(x - 2)² - 16 + 9(y + 1)² - 9 = 11
-
-4(x - 2)² + 9(y + 1)² = 36
+4x² + 9y² = 36
 
 Divide everything by 36:
 
-(x - 2)²/9 + (y + 1)²/4 = 1
+x²/9 + y²/4 = 1
 
 This is the canonical equation of an ellipse.
 
-**Step 5. Find the center**
+Its features are:
 
-Comparing with the canonical equation:
+- Center: C = (0, 0)
+- Horizontal semiaxis: 3
+- Vertical semiaxis: 2
 
-(x - a)²/A² + (y - b)²/B² = 1
+**2. Equation:**
 
-We obtain:
+x² - y² = 1
 
-Center: C = (2, -1)
+This is already the canonical equation of a hyperbola:
 
-**Step 6. Find the semiaxis lengths**
+x²/a² - y²/b² = 1
 
-A² = 9, so A = 3
+Here:
 
-B² = 4, so B = 2
+a = 1
+
+b = 1
+
+Therefore, it is a hyperbola centered at the origin, opening to the left and right.
+
+**3. Equation:**
+
+x² - 4y = 0
+
+Rearrange:
+
+x² = 4y
+
+This is the canonical equation of a parabola:
+
+x² = 4py
+
+Comparing:
+
+4p = 4
+
+p = 1
+
+Therefore, it is a parabola opening upward.
+
+Its vertex is:
+
+V = (0, 0)
+
+**4. Equation:**
+
+x² + y² + 1 = 0
+
+Rearrange:
+
+x² + y² = -1
+
+For real numbers:
+
+x² ≥ 0
+
+y² ≥ 0
 
 Therefore:
 
-- Horizontal semiaxis: 3
-- Vertical semiaxis: 2
+x² + y² ≥ 0
 
-**Step 7. Check the center in the original equation**
+It is impossible for the sum of two squares to equal -1.
 
-Substitute x = 2 and y = -1:
-
-4(2)² + 9(-1)² - 16(2) + 18(-1) - 11
-
-= 16 + 9 - 32 - 18 - 11
-
-= -36
-
-The completed-square form before dividing by 36 is:
-
-4(x - 2)² + 9(y + 1)² = 36
-
-At the center, both squared terms are zero. In the original equation, the left-hand side is therefore -36, which is consistent with the completed-square equation.
+Consequently, there are no real points satisfying this equation.
 
 **Final Answer**
 
-Canonical form:
-
-(x - 2)²/9 + (y + 1)²/4 = 1
-
-- Center: C = (2, -1)
-- Horizontal semiaxis: 3
-- Vertical semiaxis: 2
-
-The curve is an ellipse shifted from the origin.
+1. Ellipse.
+2. Hyperbola.
+3. Parabola.
+4. No real curve because the sum of two squares cannot be negative.

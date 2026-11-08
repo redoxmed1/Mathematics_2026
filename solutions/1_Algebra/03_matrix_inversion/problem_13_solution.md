@@ -3,168 +3,138 @@
 **Problem**
 
 The matrices
-\[
-S=\begin{pmatrix}
-2 & 0 \\
-0 & 1
-\end{pmatrix},
-\qquad
-H=\begin{pmatrix}
-1 & 1 \\
-0 & 1
-\end{pmatrix}
-\]
 
-describe nonuniform scaling and shear. For T = HS, find T⁻¹ in two ways:
+S = [2  0]
+    [0  1]
 
-1. First compute T, then calculate its inverse.
+H = [1  1]
+    [0  1]
+
+describe nonuniform scaling and shear.
+
+For T = HS, find T⁻¹ in two ways:
+
+1. First calculate T, then calculate its inverse.
 2. Use the property (HS)⁻¹ = S⁻¹H⁻¹.
 
-Compare the results. Additionally, compute H⁻¹S⁻¹ and verify that using the incorrect order gives a different matrix. Explain the rule: "When undoing a composition of operations, we undo them from the end."
+Compare the results. Additionally, calculate H⁻¹S⁻¹ and verify that using the incorrect order gives a different matrix.
+
+Explain the rule: "When undoing a composition of operations, we undo them from the end."
 
 **Solution**
 
 **Method 1. Calculate T first, then invert it**
 
-Since T = HS,
+Since T = HS, we multiply H by S:
 
-\[
-T=
-\begin{pmatrix}
-1 & 1 \\
-0 & 1
-\end{pmatrix}
-\begin{pmatrix}
-2 & 0 \\
-0 & 1
-\end{pmatrix}
-\]
+T = [1  1] × [2  0]
+    [0  1]   [0  1]
 
-\[
-=
-\begin{pmatrix}
-1(2)+1(0) & 1(0)+1(1) \\
-0(2)+1(0) & 0(0)+1(1)
-\end{pmatrix}
-=
-\begin{pmatrix}
-2 & 1 \\
-0 & 1
-\end{pmatrix}.
-\]
+Calculate each entry:
 
-Calculate the determinant:
+T = [1(2)+1(0)   1(0)+1(1)]
+    [0(2)+1(0)   0(0)+1(1)]
 
-\[
-\det(T)=2(1)-1(0)=2.
-\]
+Therefore:
 
-Since the determinant is nonzero, the inverse exists.
+T = [2  1]
+    [0  1]
 
-Using the inverse formula for a 2 × 2 matrix:
+**Calculate the determinant**
 
-\[
-T^{-1}
-=
-\frac12
-\begin{pmatrix}
-1 & -1 \\
-0 & 2
-\end{pmatrix}
-=
-\begin{pmatrix}
-\frac12 & -\frac12 \\
-0 & 1
-\end{pmatrix}.
-\]
+det(T) = (2 × 1) - (1 × 0)
+
+det(T) = 2
+
+Since the determinant is not zero, the inverse exists.
+
+**Calculate the inverse of T**
+
+For a 2 × 2 matrix:
+
+T = [a  b]
+    [c  d]
+
+The inverse is:
+
+T⁻¹ = 1/(ad - bc) × [ d  -b]
+                      [-c   a]
+
+Substitute the values:
+
+T⁻¹ = 1/2 × [1  -1]
+             [0   2]
+
+Therefore:
+
+T⁻¹ = [1/2  -1/2]
+      [ 0     1  ]
+
 
 **Method 2. Reverse the order of the inverses**
 
-First, calculate the inverse of S and H:
+First, calculate the inverse of S:
 
-\[
-S^{-1}=
-\begin{pmatrix}
-\frac12 & 0 \\
-0 & 1
-\end{pmatrix}
-\]
+S = [2  0]
+    [0  1]
 
-\[
-H^{-1}=
-\begin{pmatrix}
-1 & -1 \\
-0 & 1
-\end{pmatrix}.
-\]
+S⁻¹ = [1/2  0]
+      [ 0   1]
 
-Use the inverse of a product property:
+Now calculate the inverse of H:
 
-\[
-(HS)^{-1}=S^{-1}H^{-1}.
-\]
+H = [1  1]
+    [0  1]
+
+H⁻¹ = [1  -1]
+      [0   1]
+
+Using the inverse of a product property:
+
+(HS)⁻¹ = S⁻¹H⁻¹
 
 Calculate:
 
-\[
-S^{-1}H^{-1}
-=
-\begin{pmatrix}
-\frac12 & 0 \\
-0 & 1
-\end{pmatrix}
-\begin{pmatrix}
-1 & -1 \\
-0 & 1
-\end{pmatrix}
-\]
+S⁻¹H⁻¹ = [1/2  0] × [1  -1]
+          [ 0   1]   [0   1]
 
-\[
-=
-\begin{pmatrix}
-\frac12 & -\frac12 \\
-0 & 1
-\end{pmatrix}.
-\]
+Multiply the matrices:
+
+S⁻¹H⁻¹ = [1/2(1)+0(0)   1/2(-1)+0(1)]
+          [0(1)+1(0)     0(-1)+1(1)]
+
+Therefore:
+
+S⁻¹H⁻¹ = [1/2  -1/2]
+          [ 0     1  ]
 
 Both methods give the same result:
 
-\[
-T^{-1}=
-\begin{pmatrix}
-\frac12 & -\frac12 \\
-0 & 1
-\end{pmatrix}.
-\]
+T⁻¹ = [1/2  -1/2]
+      [ 0     1  ]
+
 
 **Check the incorrect order**
 
-Now calculate H⁻¹S⁻¹ without reversing the order:
+Now calculate H⁻¹S⁻¹:
 
-\[
-H^{-1}S^{-1}
-=
-\begin{pmatrix}
-1 & -1 \\
-0 & 1
-\end{pmatrix}
-\begin{pmatrix}
-\frac12 & 0 \\
-0 & 1
-\end{pmatrix}
-\]
+H⁻¹S⁻¹ = [1  -1] × [1/2  0]
+          [0   1]   [ 0   1]
 
-\[
-=
-\begin{pmatrix}
-\frac12 & -1 \\
-0 & 1
-\end{pmatrix}.
-\]
+Multiply the matrices:
 
-This result is different from T⁻¹ because the upper-right entry is -1 instead of -1/2.
+H⁻¹S⁻¹ = [1(1/2)+(-1)(0)   1(0)+(-1)(1)]
+          [0(1/2)+1(0)      0(0)+1(1)]
 
-Therefore, the order of the inverse matrices is important.
+Therefore:
+
+H⁻¹S⁻¹ = [1/2  -1]
+          [ 0    1]
+
+This result is different from the correct inverse because the upper-right entry is -1 instead of -1/2.
+
+Therefore, the order of multiplication is important.
+
 
 **Geometric Explanation**
 
@@ -172,32 +142,31 @@ The transformation T = HS applies S first and then H.
 
 To undo the complete transformation, we must undo H first and then undo S.
 
-This is why the inverse is:
+This is why the correct inverse is:
 
-\[
-T^{-1}=S^{-1}H^{-1}.
-\]
+T⁻¹ = S⁻¹H⁻¹
 
-The order of operations is reversed when calculating the inverse of a product.
+It is not equal to H⁻¹S⁻¹.
+
 
 **Conclusion**
 
-Both methods produce the same inverse matrix:
+Both methods give the same correct inverse:
 
-\[
-T^{-1}=
-\begin{pmatrix}
-\frac12 & -\frac12 \\
-0 & 1
-\end{pmatrix}.
-\]
+T⁻¹ = [1/2  -1/2]
+      [ 0     1  ]
 
-The calculation of H⁻¹S⁻¹ gives a different result, confirming that matrix multiplication is not commutative.
+The calculation of H⁻¹S⁻¹ gives a different matrix:
 
-The correct rule is:
+H⁻¹S⁻¹ = [1/2  -1]
+          [ 0    1]
 
-\[
-(AB)^{-1}=B^{-1}A^{-1}.
-\]
+This confirms that the order of matrix multiplication matters.
 
-Therefore, when undoing a composition of transformations, we must reverse the order of the operations.
+The general rule is:
+
+(AB)⁻¹ = B⁻¹A⁻¹
+
+When finding the inverse of a product, we must reverse the order of the matrices.
+
+Therefore, the exercise confirms that to undo a composition of transformations, we must undo the operations in reverse order.

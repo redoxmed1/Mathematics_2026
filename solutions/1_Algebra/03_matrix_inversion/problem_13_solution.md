@@ -3,7 +3,6 @@
 **Problem**
 
 The matrices
-
 \[
 S=\begin{pmatrix}
 2 & 0 \\

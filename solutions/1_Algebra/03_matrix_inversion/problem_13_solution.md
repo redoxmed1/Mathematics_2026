@@ -4,16 +4,16 @@
 
 Given the matrices:
 
-A =
 $$
+A =
 \begin{pmatrix}
 1 & 1 \\
 0 & 1
 \end{pmatrix}
 $$
 
-B =
 $$
+B =
 \begin{pmatrix}
 2 & 0 \\
 0 & 3

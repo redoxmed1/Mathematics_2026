@@ -121,4 +121,21 @@ This explains why matrix multiplication order reverses when taking the inverse o
 
 ## Conclusion
 
-- **Direct Computation
+Both methods produce the same inverse matrix:
+\[
+T^{-1}=
+\begin{pmatrix} 
+\frac12 & -\frac12 \\
+0 & 1
+\end{pmatrix}.
+\] 
+
+The calculation of H⁻¹S⁻¹ gives a different result, confirming that matrix multiplication is not commutative.
+
+The correct rule is:
+
+\[
+(AB)^{-1}=B^{-1}A^{-1}.
+\] 
+
+Therefore, when undoing a composition of transformations, we must reverse the order of the operations.

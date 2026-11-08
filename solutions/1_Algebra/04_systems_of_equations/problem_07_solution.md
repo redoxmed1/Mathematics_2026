@@ -1,4 +1,3 @@
-```markdown
 ### Exercise 7. Solving a System of Equations
 
 **Problem**
@@ -9,13 +8,13 @@ Solve the following system of linear equations:
 
 4y = 8
 
-Find the values of x and y. Show your method and verify the solution by substituting the values into both original equations.
+Find the values of x and y. Show the steps used to solve the system and verify the final solution by substituting the values into both original equations.
 
 **Solution**
 
-**Step 1. Find the value of y**
+**Step 1. Solve the second equation**
 
-From the second equation:
+We start with:
 
 4y = 8
 
@@ -27,11 +26,13 @@ Therefore:
 
 y = 2
 
-**Step 2. Find the value of x**
+**Step 2. Substitute the value of y into the first equation**
 
-Substitute y = 2 into the first equation:
+The first equation is:
 
 2x - y = 3
+
+Substitute y = 2:
 
 2x - 2 = 3
 
@@ -51,7 +52,7 @@ x = 5/2
 
 y = 2
 
-Check the first equation:
+First equation:
 
 2x - y = 3
 
@@ -61,7 +62,7 @@ Check the first equation:
 
 3 = 3
 
-Check the second equation:
+Second equation:
 
 4y = 8
 
@@ -77,7 +78,6 @@ x = 5/2
 
 y = 2
 
-The solution of the system is:
+Therefore, the solution of the system is:
 
 (x, y) = (5/2, 2)
-```

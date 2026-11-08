@@ -1,119 +1,205 @@
-### Exercise 3. Matrix Multiplication: Dimension Check
+# Exercise 3. When Can Matrices Be Multiplied?
 
-**Problem**
+## Problem
 
-Consider four matrices with the following dimensions:
+The matrix sizes are:
 
-* Matrix A has dimensions 2 × 3.
-* Matrix B has dimensions 3 × 4.
-* Matrix C has dimensions 4 × 2.
-* Matrix D has dimensions 2 × 2.
+A is 2 × 3
 
-Determine whether the following matrix products are defined. If a product is defined, give the dimensions of the resulting matrix.
+B is 3 × 4
 
-1. AB
-2. BA
-3. BC
-4. CB
-5. AC
-6. CA
-7. AD
-8. DA
+C is 4 × 2
 
-### Solution
+D is 2 × 2
 
-**Rule of Matrix Multiplication**
+For the products:
 
-To multiply two matrices, the number of columns in the first matrix must equal the number of rows in the second matrix.
+AB, BA, BC, CB, AC, CA, AD, DA
 
-If the first matrix has dimensions m × n and the second matrix has dimensions n × p, the product is defined and the resulting matrix has dimensions m × p.
+Determine whether each product is defined. If so, state the size of the result. Justify each decision using the dimension compatibility condition.
+
+## Solution
+
+### Step 1. Explain the Multiplication Rule
+
+Two matrices can be multiplied if the number of columns of the first matrix equals the number of rows of the second matrix.
+
+The general rule is:
+
+$$
+(m\times n)(n\times p)=m\times p
+$$
+
+The inner dimensions must be equal, and the outer dimensions determine the size of the resulting matrix.
+
+### Step 2. Check Each Product
 
 **1. Product AB**
 
-A has dimensions 2 × 3, and B has dimensions 3 × 4.
+$$
+A_{2\times3}B_{3\times4}
+$$
 
-The number of columns of A (3) equals the number of rows of B (3).
+The inner dimensions are equal:
 
-Therefore, AB is defined.
+$$
+3=3
+$$
 
-Result dimensions: 2 × 4.
+Therefore, the product is defined.
+
+The resulting matrix has dimensions:
+
+$$
+AB_{2\times4}
+$$
 
 **2. Product BA**
 
-B has dimensions 3 × 4, and A has dimensions 2 × 3.
+$$
+B_{3\times4}A_{2\times3}
+$$
 
-The number of columns of B (4) does not equal the number of rows of A (2).
+The inner dimensions are:
 
-Therefore, BA is not defined.
+$$
+4\ne2
+$$
+
+Therefore, the product is not defined.
 
 **3. Product BC**
 
-B has dimensions 3 × 4, and C has dimensions 4 × 2.
+$$
+B_{3\times4}C_{4\times2}
+$$
 
-The number of columns of B (4) equals the number of rows of C (4).
+The inner dimensions are equal:
 
-Therefore, BC is defined.
+$$
+4=4
+$$
 
-Result dimensions: 3 × 2.
+Therefore, the product is defined.
+
+The resulting matrix has dimensions:
+
+$$
+BC_{3\times2}
+$$
 
 **4. Product CB**
 
-C has dimensions 4 × 2, and B has dimensions 3 × 4.
+$$
+C_{4\times2}B_{3\times4}
+$$
 
-The number of columns of C (2) does not equal the number of rows of B (3).
+The inner dimensions are:
 
-Therefore, CB is not defined.
+$$
+2\ne3
+$$
+
+Therefore, the product is not defined.
 
 **5. Product AC**
 
-A has dimensions 2 × 3, and C has dimensions 4 × 2.
+$$
+A_{2\times3}C_{4\times2}
+$$
 
-The number of columns of A (3) does not equal the number of rows of C (4).
+The inner dimensions are:
 
-Therefore, AC is not defined.
+$$
+3\ne4
+$$
+
+Therefore, the product is not defined.
 
 **6. Product CA**
 
-C has dimensions 4 × 2, and A has dimensions 2 × 3.
+$$
+C_{4\times2}A_{2\times3}
+$$
 
-The number of columns of C (2) equals the number of rows of A (2).
+The inner dimensions are equal:
 
-Therefore, CA is defined.
+$$
+2=2
+$$
 
-Result dimensions: 4 × 3.
+Therefore, the product is defined.
+
+The resulting matrix has dimensions:
+
+$$
+CA_{4\times3}
+$$
 
 **7. Product AD**
 
-A has dimensions 2 × 3, and D has dimensions 2 × 2.
+$$
+A_{2\times3}D_{2\times2}
+$$
 
-The number of columns of A (3) does not equal the number of rows of D (2).
+The inner dimensions are:
 
-Therefore, AD is not defined.
+$$
+3\ne2
+$$
+
+Therefore, the product is not defined.
 
 **8. Product DA**
 
-D has dimensions 2 × 2, and A has dimensions 2 × 3.
+$$
+D_{2\times2}A_{2\times3}
+$$
 
-The number of columns of D (2) equals the number of rows of A (2).
+The inner dimensions are equal:
 
-Therefore, DA is defined.
+$$
+2=2
+$$
 
-Result dimensions: 2 × 3.
+Therefore, the product is defined.
+
+The resulting matrix has dimensions:
+
+$$
+DA_{2\times3}
+$$
+
+### Step 3. Final Results
+
+The defined products are:
+
+$$
+AB:\ 2\times4
+$$
+
+$$
+BC:\ 3\times2
+$$
+
+$$
+CA:\ 4\times3
+$$
+
+$$
+DA:\ 2\times3
+$$
+
+The undefined products are:
+
+$$
+BA,\quad CB,\quad AC,\quad AD
+$$
 
 ### Conclusion
 
-The defined matrix products are:
+Matrix multiplication is possible only when the number of columns of the first matrix equals the number of rows of the second matrix.
 
-* AB: 2 × 4
-* BC: 3 × 2
-* CA: 4 × 3
-* DA: 2 × 3
+When multiplication is possible, the resulting matrix takes its dimensions from the outer numbers.
 
-The undefined matrix products are:
-
-* BA
-* CB
-* AC
-* AD
-
-A matrix product is possible only when the inner dimensions of the two matrices are equal.
+This exercise demonstrates the importance of checking dimension compatibility before performing matrix multiplication.

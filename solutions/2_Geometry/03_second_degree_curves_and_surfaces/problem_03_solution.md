@@ -16,25 +16,17 @@ The canonical equation of an ellipse is:
 
 x²/a² + y²/b² = 1
 
-Comparing with the given equation:
-
-x²/25 + y²/9 = 1
-
-We obtain:
+Comparing:
 
 a² = 25
-
 b² = 9
 
 Therefore:
 
 a = 5
-
 b = 3
 
 **Step 2. Find the center**
-
-The center is:
 
 C = (0, 0)
 
@@ -43,36 +35,24 @@ C = (0, 0)
 - Horizontal semiaxis: a = 5
 - Vertical semiaxis: b = 3
 
-**Step 4. Find the intercepts with the x-axis**
+**Step 4. Find the x-intercepts**
 
-On the x-axis:
-
-y = 0
-
-Substitute:
+On the x-axis, y = 0.
 
 x²/25 = 1
-
 x² = 25
-
 x = ±5
 
 The intercepts are:
 
 (5, 0) and (-5, 0)
 
-**Step 5. Find the intercepts with the y-axis**
+**Step 5. Find the y-intercepts**
 
-On the y-axis:
-
-x = 0
-
-Substitute:
+On the y-axis, x = 0.
 
 y²/9 = 1
-
 y² = 9
-
 y = ±3
 
 The intercepts are:
@@ -88,6 +68,10 @@ It is more stretched along the x-axis because:
 5 > 3
 
 The horizontal semiaxis is longer than the vertical semiaxis.
+
+**Sketch of the ellipse**
+
+![Ellipse](images/exercise03_ellipse.svg)
 
 **Final Answer**
 

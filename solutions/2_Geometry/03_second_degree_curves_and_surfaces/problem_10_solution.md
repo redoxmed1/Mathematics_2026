@@ -17,8 +17,6 @@ z = x² + y²
 
 This surface has a minimum at the origin.
 
-Its cross-sections are described below.
-
 **Cross-section x = 0**
 
 Substitute x = 0:
@@ -81,7 +79,9 @@ There are three cases:
 
 - If c > 0, the cross-section is a hyperbola.
 - If c < 0, the cross-section is also a hyperbola, with the opposite orientation.
-- If c = 0, we obtain x² - y² = 0.
+- If c = 0, we obtain:
+
+x² - y² = 0
 
 Factor:
 
@@ -98,6 +98,10 @@ y = -x
 The cross-section consists of two intersecting lines.
 
 This surface curves upward in the x-direction and downward in the y-direction.
+
+**Sketches of the two surfaces**
+
+![Paraboloids](images/exercise10_paraboloids.svg)
 
 **Final Answer**
 

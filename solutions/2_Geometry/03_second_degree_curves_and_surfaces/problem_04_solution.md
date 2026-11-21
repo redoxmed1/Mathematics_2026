@@ -23,20 +23,15 @@ y² = 12x
 Comparing:
 
 4p = 12
-
 p = 3
 
 **Step 2. Find the vertex**
-
-The vertex is:
 
 V = (0, 0)
 
 **Step 3. Find the axis of symmetry**
 
-The equation contains y² and x.
-
-Therefore, the axis of symmetry is:
+The axis of symmetry is:
 
 y = 0
 
@@ -51,15 +46,12 @@ Since the coefficient of x is positive, the parabola opens to the right.
 Substitute x = 3:
 
 y² = 12(3)
-
 y² = 36
-
 y = ±6
 
 Therefore, the two points are:
 
 P = (3, 6)
-
 Q = (3, -6)
 
 **Step 6. Describe the parabola**
@@ -73,6 +65,10 @@ The parabola has:
 - Directrix: x = -3
 
 The points (3, 6) and (3, -6) can be used to draw the sketch.
+
+**Sketch of the parabola**
+
+![Parabola](images/exercise04_parabola.svg)
 
 **Final Answer**
 

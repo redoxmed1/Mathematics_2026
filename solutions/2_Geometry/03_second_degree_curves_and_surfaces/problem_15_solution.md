@@ -5,12 +5,11 @@
 Consider the two equations:
 
 1. 4x² + 9y² - 8x + 36y + 4 = 0
-
 2. 4x² + y² = z²
 
 For the first equation, reduce it to canonical form, recognize the curve, give its most important features, and make a sketch.
 
-For the second equation, do not begin by using a ready-made name for the surface. First describe the cross-sections z = c and the cross-sections by the planes x = 0 and y = 0, paying attention to the different scales along the axes. Only then identify the surface and make a sketch.
+For the second equation, first describe the cross-sections z = c and the cross-sections by the planes x = 0 and y = 0, paying attention to the different scales along the axes. Only then identify the surface and make a sketch.
 
 **Solution**
 
@@ -56,22 +55,16 @@ This is the canonical form of an ellipse.
 
 **Step 4. Find the center**
 
-Comparing with the canonical equation:
+Center:
 
-(x - a)²/A² + (y - b)²/B² = 1
-
-We obtain:
-
-Center: C = (1, -2)
+C = (1, -2)
 
 **Step 5. Find the semiaxis lengths**
 
 A² = 9
-
 A = 3
 
 B² = 4
-
 B = 2
 
 Therefore:
@@ -92,6 +85,10 @@ Vertical vertices:
 (1, -2 + 2) = (1, 0)
 
 (1, -2 - 2) = (1, -4)
+
+**Sketch of the ellipse**
+
+![Ellipse](images/exercise15_ellipse.svg)
 
 **Conclusion for Part 1**
 
@@ -195,6 +192,10 @@ The surface has a vertex at the origin and extends in both the positive and nega
 Because the cross-sections are ellipses rather than circles, the surface has different scales along the x-axis and y-axis.
 
 It is an elliptic double cone.
+
+**Sketch of the elliptic double cone**
+
+![Elliptic double cone](images/exercise15_elliptic_double_cone.svg)
 
 **Final Answer**
 

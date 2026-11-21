@@ -19,33 +19,23 @@ x²/a² - y²/b² = 1
 Comparing:
 
 a² = 16
-
 b² = 9
 
 Therefore:
 
 a = 4
-
 b = 3
 
 **Step 2. Find the center**
-
-The center is:
 
 C = (0, 0)
 
 **Step 3. Find the x-intercepts**
 
-Set:
-
-y = 0
-
-Substitute:
+Set y = 0.
 
 x²/16 = 1
-
 x² = 16
-
 x = ±4
 
 Therefore, the intercepts are:
@@ -54,14 +44,13 @@ Therefore, the intercepts are:
 
 **Step 4. Find the asymptotes**
 
-For a horizontal hyperbola, the asymptotes are:
+For a horizontal hyperbola:
 
 y = ±(b/a)x
 
 Substitute a = 4 and b = 3:
 
 y = (3/4)x
-
 y = -(3/4)x
 
 **Step 5. Explain the asymptotes**
@@ -73,6 +62,10 @@ Far from the center, the branches get closer and closer to the asymptote lines.
 The asymptotes describe the direction in which the branches extend.
 
 The branches approach these lines but never touch them.
+
+**Sketch of the hyperbola**
+
+![Hyperbola](images/exercise05_hyperbola.svg)
 
 **Final Answer**
 

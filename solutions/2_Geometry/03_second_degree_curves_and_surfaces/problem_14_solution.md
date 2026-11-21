@@ -130,6 +130,10 @@ Its circular cross-sections always have radius 2.
 
 It is a circular cylinder.
 
+**Sketches of the cone and cylinder**
+
+![Cone and cylinder](images/exercise14_cone_cylinder.svg)
+
 **Final Answer**
 
 First surface:

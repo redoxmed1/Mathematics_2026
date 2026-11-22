@@ -116,4 +116,4 @@ We recognize the curves by their equations:
 
 **Sketch**
 
-![Exercise 1 – Circle, ellipse, parabola and hyperbola](../images/exercise_01_sketch.png)
+![Exercise 1](../../../images/exercise_01_sketch.png)

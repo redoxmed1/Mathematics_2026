@@ -53,8 +53,7 @@ $$
 Using the power rule,
 
 $$
-(1+u)^{3/u}
-=
+(1+u)^{3/u}=
 \left((1+u)^{1/u}\right)^3.
 $$
 

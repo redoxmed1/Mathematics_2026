@@ -26,10 +26,8 @@ A function is continuous at $x=2$ if the following three conditions are satisfie
 In mathematical form:
 
 $$
-\lim_{x\to2^-}f(x)
-=
-\lim_{x\to2^+}f(x)
-=
+\lim_{x\to2^-}f(x)=
+\lim_{x\to2^+}f(x)=
 f(2).
 $$
 

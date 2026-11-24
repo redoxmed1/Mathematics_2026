@@ -94,8 +94,7 @@ differentiate each term.
 For the first term:
 
 $$
-\frac{d}{dx}(2x^{1/2})
-=
+\frac{d}{dx}(2x^{1/2})=
 2\cdot\frac12x^{-1/2}
 $$
 
@@ -106,8 +105,7 @@ $$
 For the second term:
 
 $$
-\frac{d}{dx}(-3x^{-2})
-=
+\frac{d}{dx}(-3x^{-2})=
 -3(-2)x^{-3}
 $$
 
@@ -118,8 +116,7 @@ $$
 For the third term:
 
 $$
-\frac{d}{dx}(x^{3/2})
-=
+\frac{d}{dx}(x^{3/2})=
 \frac32x^{1/2}.
 $$
 

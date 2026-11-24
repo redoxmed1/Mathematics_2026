@@ -45,15 +45,13 @@ Therefore,
 
 $$
 \lim_{x\to2^-}f(x)
-=
-\lim_{x\to2^-}(ax+1).
+=\lim_{x\to2^-}(ax+1).
 $$
 
 Substituting $x=2$ gives
 
 $$
-\lim_{x\to2^-}f(x)
-=
+\lim_{x\to2^-}f(x)=
 a(2)+1.
 $$
 
@@ -74,16 +72,14 @@ $$
 Therefore,
 
 $$
-\lim_{x\to2^+}f(x)
-=
+\lim_{x\to2^+}f(x)=
 \lim_{x\to2^+}(x^2-1).
 $$
 
 Substituting $x=2$ gives
 
 $$
-\lim_{x\to2^+}f(x)
-=
+\lim_{x\to2^+}f(x)=
 2^2-1.
 $$
 
@@ -176,8 +172,7 @@ $$
 We substitute $a=1$ into the left-hand limit:
 
 $$
-\lim_{x\to2^-}f(x)
-=
+\lim_{x\to2^-}f(x)=
 2(1)+1
 $$
 
@@ -200,10 +195,8 @@ $$
 Comparing the three results:
 
 $$
-\lim_{x\to2^-}f(x)
-=
-\lim_{x\to2^+}f(x)
-=
+\lim_{x\to2^-}f(x)=
+\lim_{x\to2^+}f(x)=
 f(2).
 $$
 

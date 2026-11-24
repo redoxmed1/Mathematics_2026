@@ -4,10 +4,11 @@
 
 Recognize the curves:
 
-1. \(x^2+y^2=9\)
-2. \(\frac{x^2}{16}+\frac{y^2}{9}=1\)
-3. \(y^2=8x\)
-4. \(\frac{x^2}{9}-\frac{y^2}{4}=1\)
+1. \(x^2+y^2
+2. =9\)
+3. \(\frac{x^2}{16}+\frac{y^2}{9}=1\)
+4. \(y^2=8x\)
+5. \(\frac{x^2}{9}-\frac{y^2}{4}=1\)
 
 For each one, identify the most important features and make a sketch. Explain which parts of the equation let you recognize the type of curve.
 

@@ -5,8 +5,7 @@
 Find the value of $a$ so that the following function is continuous at $x=2$:
 
 $$
-f(x)=
-\begin{cases}
+f(x)=\begin{cases}
 ax+1, & x<2,\\
 x^2-1, & x\geq2.
 \end{cases}

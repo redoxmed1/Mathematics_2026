@@ -65,16 +65,14 @@ $$
 The quotient rule is
 
 $$
-\left(\frac{u}{v}\right)'
-=
+\left(\frac{u}{v}\right)'=
 \frac{u'v-uv'}{v^2}.
 $$
 
 Substituting the expressions:
 
 $$
-f'(x)=
-\frac{2x(x-1)-(x^2+1)(1)}
+f'(x)=\frac{2x(x-1)-(x^2+1)(1)}
 {(x-1)^2}.
 $$
 
@@ -89,16 +87,14 @@ $$
 Therefore,
 
 $$
-f'(x)=
-\frac{2x^2-2x-(x^2+1)}
+f'(x)=\frac{2x^2-2x-(x^2+1)}
 {(x-1)^2}.
 $$
 
 Remove the parentheses:
 
 $$
-f'(x)=
-\frac{2x^2-2x-x^2-1}
+f'(x)=\frac{2x^2-2x-x^2-1}
 {(x-1)^2}.
 $$
 

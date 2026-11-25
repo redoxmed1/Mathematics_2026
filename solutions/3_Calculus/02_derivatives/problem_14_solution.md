@@ -41,16 +41,14 @@ $$
 Calculate the left-hand limit:
 
 $$
-\lim_{x\to0^-}f(x)
-=
+\lim_{x\to0^-}f(x)=
 \lim_{x\to0^-}ax.
 $$
 
 Since $a$ is a constant:
 
 $$
-\lim_{x\to0^-}f(x)
-=
+\lim_{x\to0^-}f(x)=
 a\lim_{x\to0^-}x.
 $$
 
@@ -71,8 +69,7 @@ $$
 Calculate the right-hand limit:
 
 $$
-\lim_{x\to0^+}f(x)
-=
+\lim_{x\to0^+}f(x)=
 \lim_{x\to0^+}x^2.
 $$
 
@@ -87,10 +84,8 @@ $$
 A function is continuous at zero if
 
 $$
-\lim_{x\to0^-}f(x)
-=
-\lim_{x\to0^+}f(x)
-=
+\lim_{x\to0^-}f(x)=
+\lim_{x\to0^+}f(x)=
 f(0).
 $$
 

@@ -85,8 +85,7 @@ $$
 Substitute into the difference quotient:
 
 $$
-\frac{f(1+h)-f(1)}h
-=
+\frac{f(1+h)-f(1)}h=
 \frac{1+2h+h^2-1}{h}.
 $$
 

@@ -57,8 +57,7 @@ $$
 Therefore,
 
 $$
-\frac{d}{dx}(x\sin x)
-=
+\frac{d}{dx}(x\sin x)=
 1\cdot\sin x+x\cos x.
 $$
 

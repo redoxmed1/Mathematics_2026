@@ -1,118 +1,108 @@
-# Exercise 9: One-Sided Limits and an Asymptote
+# Exercise 9 – One-Sided Limits
 
 ## Problem
 
-Analyze the left-hand and right-hand limits of
+Consider the function:
 
 $$
-f(x)=\frac1{x-2}
+f(x)=\frac{1}{x-2}
 $$
 
-as $x\to2$.
-
-Does the two-sided limit exist? Interpret the result on a sketch of the graph and identify the vertical asymptote.
+Study the left-hand and right-hand limits at $x=2$. Determine whether the two-sided limit exists. Identify the vertical and horizontal asymptotes, and sketch the graph.
 
 ## Solution
 
-We study the function
+### 1. Domain of the function
+
+The denominator must not be equal to zero:
 
 $$
-f(x)=\frac1{x-2}.
+x-2\neq 0
 $$
 
-The denominator becomes zero at $x=2$, so the function is undefined at this point.
-
-### Part 1: Left-Hand Limit
-
-We calculate
-
 $$
-\lim_{x\to2^-}\frac1{x-2}.
+x\neq 2
 $$
 
-When $x$ approaches 2 from the left, $x$ is smaller than 2.
-
-Therefore,
+Therefore, the domain is:
 
 $$
-x-2<0.
+\boxed{D_f=\mathbb{R}\setminus\{2\}}
 $$
 
-The denominator approaches zero through negative values.
+### 2. Left-hand limit
 
-Consequently, the fraction becomes increasingly negative:
-
-$$
-\boxed{\lim_{x\to2^-}\frac1{x-2}=-\infty}
-$$
-
-### Part 2: Right-Hand Limit
-
-Now calculate
+We calculate:
 
 $$
-\lim_{x\to2^+}\frac1{x-2}.
+\lim_{x\to 2^-}\frac{1}{x-2}
 $$
 
-When $x$ approaches 2 from the right, $x$ is greater than 2.
-
-Therefore,
+When $x$ approaches 2 from the left, the denominator approaches zero through negative values. The numerator remains positive, so the quotient decreases without bound.
 
 $$
-x-2>0.
+\boxed{\lim_{x\to 2^-}\frac{1}{x-2}=-\infty}
 $$
 
-The denominator approaches zero through positive values.
+### 3. Right-hand limit
 
-Consequently, the fraction becomes increasingly positive:
-
-$$
-\boxed{\lim_{x\to2^+}\frac1{x-2}=+\infty}
-$$
-
-### Part 3: Two-Sided Limit
-
-For a two-sided limit to exist as a finite real number, the left-hand and right-hand limits must agree.
-
-Here,
+We calculate:
 
 $$
-\lim_{x\to2^-}f(x)=-\infty
+\lim_{x\to 2^+}\frac{1}{x-2}
 $$
 
-while
+When $x$ approaches 2 from the right, the denominator approaches zero through positive values. The quotient increases without bound.
 
 $$
-\lim_{x\to2^+}f(x)=+\infty.
+\boxed{\lim_{x\to 2^+}\frac{1}{x-2}=+\infty}
 $$
 
-Therefore, the two-sided limit does not exist.
+### 4. Two-sided limit
+
+The left-hand and right-hand limits are different. Therefore, the two-sided limit does not exist.
 
 $$
-\boxed{\lim_{x\to2}\frac1{x-2}\text{ does not exist}}
+\boxed{\lim_{x\to 2}f(x)\text{ does not exist}}
 $$
 
-### Part 4: Vertical Asymptote and Sketch
+### 5. Vertical asymptote
 
-The denominator becomes zero at $x=2$, and the function grows without bound near this value.
-
-Therefore, the graph has a vertical asymptote:
+The function becomes unbounded as $x$ approaches 2. Thus, the vertical asymptote is:
 
 $$
 \boxed{x=2}
 $$
 
-A qualitative sketch is:
+### 6. Horizontal asymptote
 
-```text
-             y
-             |
-             |             /
-             |            /
-             |           /
--------------|----------|---------- x
-             |          2
-             |          |
-          \  |          |
-           \ |          |
-            \|          |
+As $x$ approaches positive or negative infinity, the function approaches zero:
+
+$$
+\lim_{x\to+\infty}\frac{1}{x-2}=0
+$$
+
+$$
+\lim_{x\to-\infty}\frac{1}{x-2}=0
+$$
+
+Therefore, the horizontal asymptote is:
+
+$$
+\boxed{y=0}
+$$
+
+### 7. Graph
+
+![Graph of Exercise 9](images/exercise_09_graph.png)
+
+The dashed vertical line represents $x=2$, and the horizontal asymptote is $y=0$.
+
+## Final Answer
+
+- Domain: $\mathbb{R}\setminus\{2\}$
+- Left-hand limit: $-\infty$
+- Right-hand limit: $+\infty$
+- Two-sided limit: Does not exist
+- Vertical asymptote: $x=2$
+- Horizontal asymptote: $y=0$

@@ -94,9 +94,7 @@ $$
 
 ### 7. Graph
 
-![Graph of Exercise 9](images/exercise_09_graph.png)
-
-The dashed vertical line represents $x=2$, and the horizontal asymptote is $y=0$.
+![Graph of Exercise 9](exercise_09_one_sided_limits.png)
 
 ## Final Answer
 

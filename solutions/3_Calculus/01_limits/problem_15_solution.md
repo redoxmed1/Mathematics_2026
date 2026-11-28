@@ -86,7 +86,7 @@ $$
 
 ### 4. Graph of the sequence
 
-![Graph of the sequence](images/exercise_15_sequence_graph.png)
+![Graph of the sequence](exercise_15_sequence_graph.png)
 
 The sequence consists of discrete points because $n$ takes positive integer values. The connecting curve is only a visual guide.
 
@@ -200,7 +200,7 @@ Both sides approach 2.
 
 ### 7. Graph and discontinuity
 
-![Graph of the function](images/exercise_15_function_graph.png)
+![Graph of the function](exercise_15_function_graph.png)
 
 The graph is the straight line $y=x-1$, with an open circle at $(3,2)$. The original function is undefined at $x=3$, even though its limit exists and equals 2. This is a removable discontinuity.
 

@@ -1,157 +1,236 @@
-# Exercise 15: Observation Versus Proof
+# Exercise 15 – Limits of a Sequence and a Function
 
 ## Problem
 
-Choose one sequence and one function from this set.
+Study the following sequence and function.
 
-For the sequence, compute several values for increasingly large $n$.
+**Part A – Sequence**
 
-For the function, prepare a table of values with arguments approaching the limit point from the left and right.
+$$
+a_n=\left(1+\frac{1}{n}\right)^n
+$$
 
-Sketch the behavior of both objects.
+Calculate several terms of the sequence and determine its limit as $n$ approaches infinity.
 
-Compare the observation with the analytical result and explain why a finite number of calculations or a sketch does not constitute a proof that the limit exists.
+**Part B – Function**
+
+$$
+f(x)=\frac{x^2-4x+3}{x-3}
+$$
+
+Determine the limit as $x$ approaches 3. Calculate the left-hand and right-hand limits, and explain the behaviour of the function near $x=3$.
 
 ## Solution
 
-### Part 1: Sequence
+# Part A – Sequence
 
-We choose the sequence from Exercise 4:
-
-$$
-a_n=\left(\frac23\right)^n.
-$$
-
-We calculate several terms.
+### 1. Calculate the first terms
 
 For $n=1$:
 
 $$
-a_1=\left(\frac23\right)^1
-\approx0.666667.
+a_1=\left(1+\frac{1}{1}\right)^1=2
 $$
 
 For $n=2$:
 
 $$
-a_2=\left(\frac23\right)^2
-\approx0.444444.
-$$
-
-For $n=3$:
-
-$$
-a_3=\left(\frac23\right)^3
-\approx0.296296.
+a_2=\left(1+\frac{1}{2}\right)^2=2.25
 $$
 
 For $n=5$:
 
 $$
-a_5=\left(\frac23\right)^5
-\approx0.131687.
+a_5=\left(1+\frac{1}{5}\right)^5\approx2.488320
 $$
 
 For $n=10$:
 
 $$
-a_{10}=\left(\frac23\right)^{10}
-\approx0.017342.
+a_{10}=\left(1+\frac{1}{10}\right)^{10}\approx2.593742
 $$
 
-For $n=20$:
-
-$$
-a_{20}=\left(\frac23\right)^{20}
-\approx0.000301.
-$$
-
-### Sequence Table
+### 2. Numerical table
 
 | $n$ | $a_n$ |
-|---|---:|
-| 1 | 0.666667 |
-| 2 | 0.444444 |
-| 3 | 0.296296 |
-| 5 | 0.131687 |
-| 10 | 0.017342 |
-| 20 | 0.000301 |
+|---:|---:|
+| 1 | 2.000000 |
+| 2 | 2.250000 |
+| 5 | 2.488320 |
+| 10 | 2.593742 |
+| 20 | 2.653298 |
+| 50 | 2.691588 |
+| 100 | 2.704814 |
 
-The values become smaller and approach zero.
+The values increase and approach approximately 2.718282.
 
-The analytical result is
+### 3. Limit of the sequence
 
-$$
-\lim_{n\to\infty}\left(\frac23\right)^n=0.
-$$
-
-### Part 2: Function
-
-We choose the function from Exercise 7:
+The fundamental limit that defines Euler's number is:
 
 $$
-f(x)=\frac{x^2-4x+3}{x-3}.
+\boxed{\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n=e}
 $$
 
-For $x\neq3$, factorizing and simplifying gives
+where:
 
 $$
-f(x)=\frac{(x-1)(x-3)}{x-3}.
+e\approx2.718281828
 $$
 
-Therefore,
+Therefore:
 
 $$
-f(x)=x-1,\qquad x\neq3.
+\boxed{\lim_{n\to\infty}a_n=e}
 $$
 
-We want to calculate
+### 4. Graph of the sequence
+
+![Graph of the sequence](images/exercise_15_sequence_graph.png)
+
+The sequence consists of discrete points because $n$ takes positive integer values. The connecting curve is only a visual guide.
+
+### Conclusion for Part A
 
 $$
-\lim_{x\to3}f(x).
+\boxed{\lim_{n\to\infty}a_n=e\approx2.718282}
 $$
 
-### Table of Values
+# Part B – Function
 
-Approaching 3 from the left:
+### 1. Original function
 
-| $x$ | $f(x)=x-1$ |
-|---|---:|
-| 2.9 | 1.9 |
-| 2.99 | 1.99 |
-| 2.999 | 1.999 |
+$$
+f(x)=\frac{x^2-4x+3}{x-3}
+$$
 
-Approaching 3 from the right:
+We want to calculate:
 
-| $x$ | $f(x)=x-1$ |
-|---|---:|
-| 3.1 | 2.1 |
-| 3.01 | 2.01 |
-| 3.001 | 2.001 |
+$$
+\lim_{x\to3}\frac{x^2-4x+3}{x-3}
+$$
 
-From both sides, the values approach 2.
+Direct substitution gives the indeterminate form:
 
-Therefore,
+$$
+\frac{0}{0}
+$$
+
+Therefore, we need to simplify the expression.
+
+### 2. Factorization
+
+Factor the numerator:
+
+$$
+x^2-4x+3=(x-1)(x-3)
+$$
+
+Substitute this into the original function:
+
+$$
+f(x)=\frac{(x-1)(x-3)}{x-3}
+$$
+
+For $x\neq3$, cancel the common factor:
+
+$$
+f(x)=x-1
+$$
+
+### 3. Calculate the two-sided limit
+
+$$
+\lim_{x\to3}(x-1)=3-1=2
+$$
+
+Therefore:
 
 $$
 \boxed{\lim_{x\to3}f(x)=2}
 $$
 
-The original function is undefined at $x=3$, but this does not prevent the limit from existing.
+### 4. Left-hand limit
 
-### Part 3: Sketches
+$$
+\lim_{x\to3^-}f(x)
+=
+\lim_{x\to3^-}(x-1)
+=2
+$$
 
-The sequence approaches zero:
+Therefore:
 
-```text
-a_n
- |
-0.7 | *
-0.6 |
-0.5 |    *
-0.4 |
-0.3 |       *
-0.2 |           *
-0.1 |                *
-0.0 |________________________ n
-       1  2  3  5  10  20
+$$
+\boxed{\lim_{x\to3^-}f(x)=2}
+$$
+
+### 5. Right-hand limit
+
+$$
+\lim_{x\to3^+}f(x)
+=
+\lim_{x\to3^+}(x-1)
+=2
+$$
+
+Therefore:
+
+$$
+\boxed{\lim_{x\to3^+}f(x)=2}
+$$
+
+### 6. Numerical verification
+
+**Approaching 3 from the left:**
+
+| $x$ | $f(x)=x-1$ |
+|---:|---:|
+| 2.9 | 1.9 |
+| 2.99 | 1.99 |
+| 2.999 | 1.999 |
+
+**Approaching 3 from the right:**
+
+| $x$ | $f(x)=x-1$ |
+|---:|---:|
+| 3.1 | 2.1 |
+| 3.01 | 2.01 |
+| 3.001 | 2.001 |
+
+Both sides approach 2.
+
+### 7. Graph and discontinuity
+
+![Graph of the function](images/exercise_15_function_graph.png)
+
+The graph is the straight line $y=x-1$, with an open circle at $(3,2)$. The original function is undefined at $x=3$, even though its limit exists and equals 2. This is a removable discontinuity.
+
+### Final conclusion
+
+The left-hand and right-hand limits are equal:
+
+$$
+\lim_{x\to3^-}f(x)=2
+$$
+
+$$
+\lim_{x\to3^+}f(x)=2
+$$
+
+Therefore:
+
+$$
+\boxed{\lim_{x\to3}f(x)=2}
+$$
+
+## Final Summary
+
+| Part | Result |
+|---|---|
+| Sequence limit | $e\approx2.718282$ |
+| Function left-hand limit | 2 |
+| Function right-hand limit | 2 |
+| Function two-sided limit | 2 |
+| Discontinuity | Removable |
+| Missing point | $(3,2)$ |

@@ -153,8 +153,7 @@ $$
 ### 4. Left-hand limit
 
 $$
-\lim_{x\to3^-}f(x)
-=
+\lim_{x\to3^-}f(x)=
 \lim_{x\to3^-}(x-1)
 =2
 $$
